@@ -1,0 +1,145 @@
+.blog-sustainable {
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+.blog-sustainable .div-2 {
+    background-color: #e6e6e6;
+    height: 5264px;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-sustainable .light-carbon-in {
+    color: #101010;
+    font-family: "Poppins-Light";
+    font-size: 96px;
+    font-weight: 300;
+    height: 373px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1178px;
+}
+
+.blog-sustainable .text-wrapper-11 {
+    color: #101010;
+    font-family: "Poppins-Light";
+    font-size: 96px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-sustainable .text-wrapper-12 {
+    font-size: 20px;
+    line-height: 43.2px;
+}
+
+.blog-sustainable .the-world-has-been-a {
+    color: #000000;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1521px;
+    width: 581px;
+}
+
+.blog-sustainable .text-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    left: 759px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2259px;
+    width: 586px;
+}
+
+.blog-sustainable .text-wrapper-14 {
+    color: #000000;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 3067px;
+    width: 581px;
+}
+
+.blog-sustainable .standing-at-the {
+    color: #000000;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 3842px;
+    width: 581px;
+}
+
+
+.blog-sustainable .group {
+    height: 735px;
+    left: 0;
+    position: absolute;
+    top: 697px;
+    width: 1512px;
+}
+
+.blog-sustainable .image {
+    height: 570px;
+    left: 167px;
+    position: absolute;
+    top: 3068px;
+    width: 581px;
+}
+
+.blog-sustainable .image-2 {
+    height: 570px;
+    left: 167px;
+    position: absolute;
+    top: 3728px;
+    width: 583px;
+}
+
+.blog-sustainable .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 4519px;
+    width: 462px;
+}
+
+.blog-sustainable .text-wrapper-15 {
+    color: #000000;
+    font-family: "Poppins-Lightitalic";
+    font-size: 24px;
+    font-weight: 300;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 1845px;
+    width: 535px;
+}

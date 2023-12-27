@@ -1,0 +1,73 @@
+.flexbox-container1 {
+  position: absolute;
+  left: 150px;
+  overflow-y: hidden;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch;
+    justify-content: center; */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.flexbox-roww {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  position: relative;
+  left: 20px;
+}
+
+.flexbox-item1 {
+  padding: 10px;
+}
+
+#general-illu:hover img {
+  content: url("../images/General\ illuminationhover.png");
+}
+
+#soft-direct:hover img {
+  content: url("../images/Soft\ directhover.png");
+}
+
+#soft-indirect:hover img {
+  content: url("../images/Soft\ indirecthover.png");
+}
+
+#task-light:hover img {
+  content: url("../images/Task\ lighthover.png");
+}
+
+#high-art:hover img {
+  content: url("../images/Highlight\ arthover.png");
+}
+
+#high-object:hover img {
+  content: url("../images/Highlight\ objecthover.png");
+}
+
+#high-wall:hover img {
+  content: url("../images/Highlight\ wallhover.png");
+}
+
+#decorative:hover img {
+  content: url("../images/Decorative\ lighthover.png");
+}
+
+#colourful-light:hover img {
+  content: url("../images/Colourful\ lighthover.png");
+}
+
+#projection:hover img {
+  content: url("../images/Projectionhover.png");
+}
+
+#special-app:hover img {
+  content: url("../images/Special\ applicationhover.png");
+}
+
+#therapeutic:hover img {
+  content: url("../images/Therapuetichover.png");
+}

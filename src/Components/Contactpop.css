@@ -1,0 +1,82 @@
+.pop {
+  position: relative;
+  width: 1093px;
+  height: 1295px;
+  overflow-y: scroll;
+  background: #e6e6e6;
+}
+
+.us {
+  position: absolute;
+  width: 787px;
+  height: 216px;
+  left: 55px;
+  top: 60px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 144px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.para {
+  position: absolute;
+  width: 565px;
+  height: 243px;
+  left: 50px;
+  top: 255px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.yellow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: 743px;
+  top: 311px;
+}
+.submit {
+  position: absolute;
+  width: 119px;
+  height: 48px;
+  left: 64px;
+  top: 1500px;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  color: white;
+  border: none;
+  background: #ff4700;
+}
+.phone,
+.email,
+.add {
+  width: 172px;
+  height: 60px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  color: #808080;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

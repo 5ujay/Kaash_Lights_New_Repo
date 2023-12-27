@@ -1,0 +1,255 @@
+.blog-immersive-hotel {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-immersive-hotel .div-2 {
+    background-color: #ffffff;
+    height: 6742px;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-immersive-hotel .immersive-hotels {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 373px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1194px;
+}
+
+.blog-immersive-hotel .itext-wrapper-11 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-immersive-hotel .itext-wrapper-12 {
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-immersive-hotel .irectangle-3 {
+    height: 620px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 697px;
+    width: 1512px;
+}
+
+.blog-immersive-hotel .itext-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1928px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .itext-wrapper-14 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2800px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .itext-wrapper-15 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5673px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .itext-wrapper-16 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 3776px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .igroup {
+    height: 886px;
+    left: 167px;
+    position: absolute;
+    top: 2801px;
+    width: 583px;
+}
+
+.blog-immersive-hotel .igroup-2 {
+    /* background-image: url(../../images/image9.png); */
+    background-size: 100% 100%;
+    height: 798px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 581px;
+}
+
+.blog-immersive-hotel .itext-wrapper-17 {
+    color: #000000;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 823px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .image {
+    height: 782px;
+    left: 167px;
+    position: absolute;
+    top: 1929px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .igroup-wrapper {
+    height: 1026px;
+    left: 0;
+    position: absolute;
+    top: 4558px;
+    width: 1512px;
+}
+
+.blog-immersive-hotel .igroup-3 {
+    height: 1026px;
+    position: relative;
+}
+
+.blog-immersive-hotel .image-2 {
+    height: 515px;
+    left: 0;
+    position: absolute;
+    top: 511px;
+    width: 748px;
+}
+
+.blog-immersive-hotel .image-3 {
+    height: 495px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 748px;
+}
+
+.blog-immersive-hotel .image-4 {
+    height: 596px;
+    left: 764px;
+    position: absolute;
+    top: 430px;
+    width: 748px;
+}
+
+.blog-immersive-hotel .image-5 {
+    height: 414px;
+    left: 764px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 748px;
+}
+
+.blog-immersive-hotel .image-6 {
+    height: 691px;
+    left: 167px;
+    position: absolute;
+    top: 3777px;
+    width: 581px;
+}
+
+
+
+
+
+
+.blog-immersive-hotel .itext-wrapper-18 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 57.6px;
+    position: absolute;
+    top: 1618px;
+    width: 597px;
+}
+
+.blog-immersive-hotel .le-corbusier-a-great {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1406px;
+    width: 581px;
+}
+
+.blog-immersive-hotel .text-wrapper-19 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 36px;
+}
+
+.blog-immersive-hotel .text-wrapper-20 {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+}
+
+.blog-immersive-hotel .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5951px;
+    width: 462px;
+}

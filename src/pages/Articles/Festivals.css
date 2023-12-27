@@ -1,0 +1,172 @@
+.blog-light-festival {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-light-festival .fdiv-2 {
+    background-color: #ffffff;
+    height: 5930px;
+    overflow: hidden;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-light-festival .lights-in-bergamo {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 373px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1178px;
+}
+
+.blog-light-festival .ftext-wrapper-11 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-light-festival .ftext-wrapper-12 {
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-light-festival .the-festival-was {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2115px;
+    width: 586px;
+}
+
+.blog-light-festival .art-lighting-in {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 3764px;
+    width: 581px;
+}
+
+.blog-light-festival .so-if-you-missed-out {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5113px;
+    width: 581px;
+}
+
+.blog-light-festival .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 171px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5175px;
+    width: 458px;
+}
+
+.blog-light-festival .fgroup {
+    height: 735px;
+    left: 0;
+    position: absolute;
+    top: 697px;
+    width: 1512px;
+}
+
+.blog-light-festival .fgroup-wrapper {
+    height: 797px;
+    left: -1px;
+    position: absolute;
+    top: 2878px;
+    width: 1514px;
+}
+
+.blog-light-festival .fimage-wrapper {
+    height: 797px;
+    position: relative;
+}
+
+.blog-light-festival .fimage {
+    height: 797px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+}
+
+.blog-light-festival .are-you-ready-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1521px;
+    width: 581px;
+}
+
+.blog-light-festival .fimage-2 {
+    height: 667px;
+    left: 0;
+    position: absolute;
+    top: 4287px;
+    width: 1512px;
+}
+
+.blog-light-festival .fgroup-2 {
+    /* background-image: url(./mappa-festadellelucia2a-6-1.png); */
+    background-size: 100% 100%;
+    height: 602px;
+    left: 151px;
+    position: absolute;
+    top: 2116px;
+    width: 597px;
+}
+
+
+
+
+
+.blog-light-festival .ftext-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 57.6px;
+    position: absolute;
+    top: 1763px;
+    width: 535px;
+}

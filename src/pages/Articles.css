@@ -1,0 +1,11 @@
+.hero {
+  background-image: url("../images/Blogpollination2.png");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.img-gallery {
+  background-color: #e4e4e7;
+}

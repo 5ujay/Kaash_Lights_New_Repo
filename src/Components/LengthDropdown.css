@@ -1,0 +1,19 @@
+div > select{
+    display: inline-flex;
+    padding: 14px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    background: var(--greydefault, #E6E6E6);
+    border: none;
+    position: relative;
+    top: -13px;
+    left: 5px;
+    cursor: pointer;
+}
+
+div > select:hover{
+    background-color: #7246FD;
+    color: white;
+}

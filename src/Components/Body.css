@@ -1,0 +1,31 @@
+.yellow-card {
+  background-color: #ffff00;
+}
+.red-card {
+  background-color: #ff2500;
+}
+#neon {
+  touch-action: pan-up;
+  position: relative;
+  overflow: hidden;
+}
+#neon canvas {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+/* .blur-background {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+} */
+.blur-background {
+  filter: blur(5px) brightness(0.5);
+  transition: filter 0.5s;
+}
+.contactpop-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

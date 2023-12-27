@@ -1,0 +1,195 @@
+.blog-sustainble {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-sustainble .div-2 {
+    background-color: #ffffff;
+    height: 6461px;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-sustainble .sustainable-lighting {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 373px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1178px;
+}
+
+.blog-sustainble .text-wrapper-11 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-sustainble .text-wrapper-12 {
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-sustainble .the-reign-of-queen {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1830px;
+    width: 581px;
+}
+
+.blog-sustainble .the-also-saw {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2859px;
+    width: 581px;
+}
+
+.blog-sustainble .text-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5608px;
+    width: 581px;
+}
+
+.blog-sustainble .group {
+    height: 1044px;
+    left: 0;
+    position: absolute;
+    top: 697px;
+    width: 1512px;
+}
+
+.blog-sustainble .image {
+    height: 667px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 4782px;
+    width: 1512px;
+}
+
+.blog-sustainble .image-2 {
+    height: 667px;
+    left: 0;
+    position: absolute;
+    top: 3902px;
+    width: 1512px;
+}
+
+
+.blog-sustainble .group-2 {
+    /* background-image: url(./mappa-festadellelucia2a-6-1.png); */
+    background-size: 100% 100%;
+    height: 882px;
+    left: 167px;
+    position: absolute;
+    top: 1831px;
+    width: 581px;
+}
+
+.blog-sustainble .group-3 {
+    /* background-image: url(./image.png); */
+    
+    background-size: 100% 100%;
+    height: 882px;
+    left: 167px;
+    position: absolute;
+    top: 2860px;
+    width: 581px;
+}
+
+.blog-sustainble .text-wrapper-14 {
+    color: #000000;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    height: 17px;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 4604px;
+    width: 820px;
+}
+
+.blog-sustainble .revolutionary {
+    color: #000000;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    height: 41px;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 3761px;
+    width: 581px;
+}
+
+.blog-sustainble .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 167px;
+    padding: 10px;
+    position: absolute;
+    top: 2733px;
+}
+
+.blog-sustainble .text-wrapper-15 {
+    color: #000000;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    width: 478px;
+}
+
+.blog-sustainble .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5716px;
+    width: 457px;
+}

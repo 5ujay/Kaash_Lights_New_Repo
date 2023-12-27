@@ -1,0 +1,11 @@
+.box:hover {
+  background: linear-gradient(
+    to bottom,
+    transparent 4.48%,
+    rgba(252, 255, 103, 0.932) 98.23%
+  );
+}
+
+.bg-purple {
+  background-color: #7246fd;
+}

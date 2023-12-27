@@ -1,0 +1,23 @@
+.main-text{
+    pointer-events: none;
+    position: absolute;
+    width: 621px;
+    height: 485px;
+    left: 444px;
+    top: 140px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 96px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: rgb(255, 71, 0);
+    color: #FF4700;
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 76.8px */
+}

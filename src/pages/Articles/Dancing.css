@@ -1,0 +1,178 @@
+.blog-concerts {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-concerts .div-2 {
+    background-color: #ffffff;
+    height: 5505px;
+    overflow: hidden;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-concerts .dancing-to-light {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 258px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1194px;
+}
+
+.blog-concerts .text-wrapper-11 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-concerts .text-wrapper-12 {
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-concerts .text-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1465px;
+    width: 581px;
+}
+
+.blog-concerts .lighting-is-built {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1769px;
+    width: 581px;
+}
+
+.blog-concerts .with-technology-came {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 4148px;
+    width: 581px;
+}
+
+.blog-concerts .group {
+    /* background-image: url(./image-9.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 669px;
+    left: 167px;
+    position: absolute;
+    top: 2582px;
+    width: 581px;
+}
+
+.blog-concerts .image {
+    height: 715px;
+    left: 167px;
+    object-fit: cover;
+    position: absolute;
+    top: 1770px;
+    width: 581px;
+}
+
+
+.blog-concerts .group-wrapper {
+    height: 794px;
+    left: -1px;
+    position: absolute;
+    top: 582px;
+    width: 1514px;
+}
+
+.blog-concerts .image-wrapper {
+    height: 794px;
+    position: relative;
+}
+
+.blog-concerts .image-2 {
+    height: 794px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+}
+
+.blog-concerts .when-was-it {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 2574px;
+    width: 581px;
+}
+
+.blog-concerts .group-2 {
+    height: 633px;
+    left: -1px;
+    position: absolute;
+    top: 3411px;
+    width: 1513px;
+}
+
+.blog-concerts .image-3 {
+    height: 633px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 756px;
+}
+
+.blog-concerts .image-4 {
+    height: 633px;
+    left: 756px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 756px;
+}
+
+
+.blog-concerts .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 163px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 4760px;
+    width: 462px;
+}

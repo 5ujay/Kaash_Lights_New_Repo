@@ -1,0 +1,456 @@
+.talk-services {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .talk-services .div {
+    background-color: black;
+    border: 1px none;
+    height: 3379px;
+    overflow: hidden;
+    position: relative;
+    width: 1512px;
+  }
+  
+  .talk-services .overlap {
+    height: 3379px;
+    left: -1px;
+    position: absolute;
+    top: 0;
+    width: 3290px;
+  }
+  
+  .talk-services .overlap-group {
+    height: 3379px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 3113px;
+  }
+  
+  .talk-services .overlap-2 {
+    height: 3379px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2182px;
+  }
+  
+  .talk-services .fondo {
+    height: 3379px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+  }
+  
+  .talk-services .ellipse {
+    height: 1578px;
+    left: 556px;
+    mix-blend-mode: difference;
+    position: absolute;
+    top: 65px;
+    width: 957px;
+  }
+  
+  .talk-services .rectangle {
+    background-color: #ffffff;
+    height: 161px;
+    left: 2px;
+    position: absolute;
+    top: 1403px;
+    width: 1512px;
+  }
+  
+  .talk-services .rectangle-2 {
+    background-color: #ffffff;
+    height: 161px;
+    left: 1px;
+    position: absolute;
+    top: 1198px;
+    width: 1512px;
+  }
+  
+  .talk-services .we-use-light-to {
+    color: #ffffff;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 406px;
+    left: 65px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 483px;
+    width: 684px;
+  }
+  
+  .talk-services .span {
+    color: #ffffff;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+  
+  .talk-services .rectangle-3 {
+    background-color: #ffffff;
+    height: 161px;
+    left: 0;
+    position: absolute;
+    top: 1607px;
+    width: 1512px;
+  }
+  
+  .talk-services .text-wrapper-2 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 144px;
+    left: 460px;
+    letter-spacing: 0;
+    line-height: 144px;
+    position: absolute;
+    top: 1615px;
+    white-space: nowrap;
+  }
+  
+  .talk-services .text-wrapper-3 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 72px;
+    left: 308px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 1447px;
+    width: 917px;
+  }
+  
+  .talk-services .text-wrapper-4 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 83px;
+    left: 49px;
+    letter-spacing: 0;
+    line-height: 144px;
+    position: absolute;
+    top: 1236px;
+    white-space: nowrap;
+    width: 1076px;
+  }
+  
+  .talk-services .nav-bar-instance {
+    left: 1px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .talk-services .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 260px;
+    font-weight: 300;
+    height: 165px;
+    left: 59px;
+    letter-spacing: 0;
+    line-height: 390px;
+    position: absolute;
+    top: 221px;
+    white-space: nowrap;
+    width: 2123px;
+  }
+  
+  .talk-services .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 48px;
+    font-weight: 300;
+    height: 59px;
+    left: 49px;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: absolute;
+    top: 1069px;
+    white-space: nowrap;
+    width: 635px;
+  }
+  
+  .talk-services .vector {
+    height: 102px;
+    left: 1165px;
+    position: absolute;
+    top: 1228px;
+    width: 102px;
+  }
+  
+  .talk-services .img {
+    height: 102px;
+    left: 1260px;
+    position: absolute;
+    top: 1433px;
+    width: 102px;
+  }
+  
+  .talk-services .vector-2 {
+    height: 102px;
+    left: 1361px;
+    position: absolute;
+    top: 1644px;
+    width: 102px;
+  }
+  
+  .talk-services .rectangle-4 {
+    background-color: #ffffff;
+    height: 161px;
+    left: 3px;
+    position: absolute;
+    top: 2391px;
+    width: 1512px;
+  }
+  
+  .talk-services .rectangle-5 {
+    background-color: #ffffff;
+    height: 161px;
+    left: 2px;
+    position: absolute;
+    top: 2186px;
+    width: 1512px;
+  }
+  
+  .talk-services .rectangle-6 {
+    background-color: #ffffff;
+    height: 161px;
+    left: 1px;
+    position: absolute;
+    top: 2595px;
+    width: 1512px;
+  }
+  
+  .talk-services .architects-engineers {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 144px;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: 144px;
+    position: absolute;
+    top: 2603px;
+    white-space: nowrap;
+  }
+  
+  .talk-services .text-wrapper-7 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 40px;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 2451px;
+    white-space: nowrap;
+  }
+  
+  .talk-services .text-wrapper-8 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 93px;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: 144px;
+    position: absolute;
+    top: 2219px;
+    white-space: nowrap;
+    width: 844px;
+  }
+  
+  .talk-services .vector-3 {
+    height: 102px;
+    left: 963px;
+    position: absolute;
+    top: 2220px;
+    width: 102px;
+  }
+  
+  .talk-services .vector-4 {
+    height: 102px;
+    left: 1431px;
+    position: absolute;
+    top: 2421px;
+    width: 82px;
+  }
+  
+  .talk-services .vector-5 {
+    height: 102px;
+    left: 1209px;
+    position: absolute;
+    top: 2625px;
+    width: 102px;
+  }
+  
+  .talk-services .do-you-have-light-a {
+    color: #ffffff;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 48px;
+    font-weight: 300;
+    height: 72px;
+    left: 49px;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: absolute;
+    top: 2008px;
+    white-space: nowrap;
+  }
+  
+  .talk-services .button-instance {
+    left: 49px !important;
+    position: absolute !important;
+    top: 2868px !important;
+  }
+  
+  .talk-services .element-wrapper {
+    background-color: #ffffff;
+    height: 161px;
+    left: 1601px;
+    position: absolute;
+    top: 2455px;
+    width: 1512px;
+  }
+  
+  .talk-services .element {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 93px;
+    left: 186px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 33px;
+    width: 535px;
+  }
+  
+  .talk-services .element-m-wrapper {
+    background-color: #ffffff;
+    height: 161px;
+    left: 1600px;
+    position: absolute;
+    top: 2250px;
+    width: 1512px;
+  }
+  
+  .talk-services .element-m {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 93px;
+    left: 187px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 33px;
+    width: 408px;
+  }
+  
+  .talk-services .div-wrapper {
+    background-color: #ffffff;
+    height: 161px;
+    left: 1599px;
+    position: absolute;
+    top: 2659px;
+    width: 1512px;
+  }
+  
+  .talk-services .element-2 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 93px;
+    left: 188px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 38px;
+    width: 408px;
+  }
+  
+  .talk-services .text-wrapper-9 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 128px;
+    font-weight: 400;
+    height: 166px;
+    left: 2632px;
+    letter-spacing: 0;
+    line-height: 192px;
+    position: absolute;
+    top: 870px;
+    white-space: nowrap;
+    width: 658px;
+  }
+  
+  .talk-services .overlap-group-2 {
+    height: 255px;
+    left: 10082px;
+    position: absolute;
+    top: 1316px;
+    width: 103px;
+  }
+  
+  .talk-services .vector-6 {
+    height: 145px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 102px;
+  }
+  
+  .talk-services .vector-7 {
+    height: 151px;
+    left: 1px;
+    position: absolute;
+    top: 104px;
+    width: 102px;
+  }
+  
+  .talk-services .vector-8 {
+    height: 102px;
+    left: 9618px;
+    position: absolute;
+    top: 1373px;
+    width: 102px;
+  }
+  
+  .talk-services .vector-9 {
+    height: 102px;
+    left: 9618px;
+    position: absolute;
+    top: 1574px;
+    width: 102px;
+  }
+  
+  .talk-services .vector-10 {
+    height: 102px;
+    left: 9618px;
+    position: absolute;
+    top: 1778px;
+    width: 102px;
+  }

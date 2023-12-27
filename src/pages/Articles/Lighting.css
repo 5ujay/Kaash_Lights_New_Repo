@@ -1,0 +1,180 @@
+.blog-lighting-design {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-lighting-design .div {
+    background-color: #ffffff;
+    height: 6245px;
+    overflow: hidden;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-lighting-design .luxury-of-lighting {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 258px;
+    left: 151px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1194px;
+}
+
+.blog-lighting-design .text-wrapper {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-lighting-design .span {
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-lighting-design .design-and-style {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 767px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1459px;
+    width: 581px;
+}
+
+.blog-lighting-design .p {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 763px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2977px;
+    width: 581px;
+}
+
+.blog-lighting-design .group {
+    height: 676px;
+    left: 160px;
+    position: absolute;
+    top: 2978px;
+    width: 589px;
+}
+
+.blog-lighting-design .image {
+    height: 614px;
+    left: 6px;
+    position: absolute;
+    top: 0;
+    width: 581px;
+}
+
+.blog-lighting-design .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 635px;
+    width: 581px;
+}
+
+.blog-lighting-design .img {
+    height: 786px;
+    left: 166px;
+    object-fit: cover;
+    position: absolute;
+    top: 2098px;
+    width: 581px;
+}
+
+
+
+.blog-lighting-design .group-wrapper {
+    height: 794px;
+    left: -1px;
+    position: absolute;
+    top: 582px;
+    width: 1514px;
+}
+
+.blog-lighting-design .image-wrapper {
+    height: 794px;
+    position: relative;
+}
+
+.blog-lighting-design .image-2 {
+    height: 794px;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+}
+
+.blog-lighting-design .the-way-light-falls {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 763px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4806px;
+    width: 581px;
+}
+
+.blog-lighting-design .image-3 {
+    height: 903px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 3814px;
+    width: 1511px;
+}
+
+.blog-lighting-design .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5490px;
+    width: 462px;
+}
+
+.blog-lighting-design .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 57.6px;
+    position: absolute;
+    top: 1619px;
+    width: 535px;
+}

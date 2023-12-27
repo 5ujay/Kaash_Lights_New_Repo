@@ -1,0 +1,118 @@
+.gradient{
+    position: relative;
+    top: -200px;
+    left: 120px;
+    /* z-index: -1; */
+}
+
+.thank{
+    color: var(--DEFAULT, #7246FD);
+    position: absolute;
+    top: 140px;
+    left: 290px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 170px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 170px */
+    z-index: 1;
+}
+
+.process{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: absolute;
+    top: 325px;
+    left: 420px;
+    width: 664px;
+    z-index: 1;
+}
+
+.process > p{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 135%; /* 37.8px */
+}
+
+.download-btn{
+    position: relative;
+    top: -480px;
+    left: 600px;
+    display: flex;
+    width: 298px;
+    height: 56.424px;
+    padding: 7px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    flex-shrink: 0;
+    background: #7246FD;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.16);
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    cursor: pointer;
+    z-index: 1;
+}
+
+.horizon{
+    position: relative;
+    top: -450px;
+    left: 100px;
+    width: 1296px;
+    height: 10px;
+    flex-shrink: 0;
+    stroke-width: 3px;
+    stroke: #7246FD;
+    z-index: 1;
+}
+
+.mean-time{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 135%; /* 27px */
+    position: relative;
+    top: -440px;
+    z-index: 1;
+}
+
+.projects-btn{
+    position: relative;
+    top: -410px;
+    left: 600px;
+    display: flex;
+    width: 298px;
+    height: 56.424px;
+    padding: 7px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    flex-shrink: 0;
+    background: #7246FD;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.16);
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    cursor: pointer;
+    z-index: 1;
+}

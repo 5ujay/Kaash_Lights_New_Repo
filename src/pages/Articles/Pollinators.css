@@ -1,0 +1,258 @@
+.blog-pollinators {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-pollinators .div-2 {
+    background-color: #ffffff;
+    height: 7433px;
+    position: relative;
+    width: 1512px;
+}
+
+.blog-pollinators .nav-bar-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.blog-pollinators .poor-agriculture-and {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    height: 431px;
+    left: 80px;
+    letter-spacing: 0;
+    line-height: 115.2px;
+    position: absolute;
+    top: 233px;
+    width: 1351px;
+}
+
+.blog-pollinators .text-wrapper-11 {
+    position: relative;
+    top: -80px;
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 115.2px;
+}
+
+.blog-pollinators .text-wrapper-12 {
+    font-size: 48px;
+    line-height: 57.6px;
+}
+
+.blog-pollinators .text-wrapper-13 {
+    position: relative;
+    top: -180px;
+    font-size: 36px;
+    line-height: 43.2px;
+}
+
+.blog-pollinators .pollinators-such-as {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 1381px;
+    width: 581px;
+}
+
+.blog-pollinators .text-wrapper-14 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: absolute;
+    top: 1381px;
+    width: 581px;
+}
+
+.blog-pollinators .the-impact-of {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 2492px;
+    width: 581px;
+}
+
+.blog-pollinators .the-impact-of-street {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 4208px;
+    width: 581px;
+}
+
+.blog-pollinators .fortunately-there {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 5296px;
+    width: 581px;
+}
+
+.blog-pollinators .text-wrapper-15 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 764px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 6401px;
+    width: 581px;
+}
+
+.blog-pollinators .if-you-would-like-to {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 6643px;
+    width: 462px;
+}
+
+.blog-pollinators .overlap {
+    height: 537px;
+    left: 0;
+    position: absolute;
+    top: 755px;
+    width: 1512px;
+}
+
+.blog-pollinators .street-lighting-and {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 167px;
+    letter-spacing: 0;
+    line-height: 36px;
+    position: absolute;
+    top: 122px;
+    width: 1178px;
+}
+
+.blog-pollinators .image {
+    height: 537px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1512px;
+}
+
+.blog-pollinators .image-2 {
+    height: 416px;
+    left: 140px;
+    position: relative;
+    top: 1700px;
+    width: 580px;
+}
+
+.blog-pollinators .image-3 {
+    height: 593px;
+    left: 167px;
+    position: absolute;
+    top: 2493px;
+    width: 580px;
+}
+
+.blog-pollinators .footer-instance {
+    background-color: transparent !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 7113px !important;
+}
+
+.blog-pollinators .footer-2 {
+    width: 1512px !important;
+}
+
+.blog-pollinators .footer-3 {
+    /* background-image: url(./image.png) !important; */
+    height: 50px !important;
+    left: 1056px !important;
+    position: absolute !important;
+    top: 43px !important;
+    width: 50px !important;
+}
+
+.blog-pollinators .footer-4 {
+    /* background-image: url(./image-1-2.png) !important; */
+    height: 44px !important;
+    left: 973px !important;
+    position: absolute !important;
+    top: 113px !important;
+    width: 133px !important;
+}
+
+.blog-pollinators .footer-5 {
+    /* background-image: url(./image-54-2.png) !important; */
+    height: 40px !important;
+    left: 915px !important;
+    position: absolute !important;
+    top: 239px !important;
+    width: 191px !important;
+}
+
+.blog-pollinators .image-4 {
+    height: 700px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 3419px;
+    width: 1512px;
+}
+
+.blog-pollinators .image-5 {
+    height: 657px;
+    left: 167px;
+    object-fit: cover;
+    position: absolute;
+    top: 4550px;
+    width: 581px;
+}
+
+.blog-pollinators .image-6 {
+    height: 1007px;
+    left: 167px;
+    object-fit: cover;
+    position: absolute;
+    top: 5305px;
+    width: 581px;
+}

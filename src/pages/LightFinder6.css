@@ -1,0 +1,239 @@
+.flex-container{
+    position: absolute;
+    top: 100px;
+    left: 160px;
+    display: flex;
+    z-index: 1;
+}
+
+.btn{
+    display: flex;
+    width: 341px;
+    height: 90px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--greydefault, #E6E6E6);
+    margin: 8px;
+    border: none;
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 18px */
+    letter-spacing: 0.54px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.btn:hover{
+    background-color: #7246FD;
+    color: white;
+}
+
+.need-light1{
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    position: absolute;
+    top: 250px;
+    left: 160px;
+    width: 521px;
+    height: 19px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.length{
+    display: flex;
+    gap: 15px;
+    color: #000;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 330px;
+    left: 166px;
+    z-index: 1;
+}
+
+.breadth{
+    display: flex;
+    gap: 15px;
+    color: #000;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 430px;
+    left: 166px;
+    z-index: 1;
+}
+
+.height{
+    display: flex;
+    gap: 15px;
+    color: #000;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 530px;
+    left: 166px;
+    z-index: 1;
+}
+
+.area{
+    display: flex;
+    gap: 15px;
+    color: #000;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    position: absolute;
+    top: 325px;
+    left: 950px;
+    z-index: 1;
+}
+
+.area  input{
+    position: relative;
+    top: -12px;
+    left: 21px;
+    width: 171px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: var(--greydefault, #E6E6E6);
+    margin-right: 12px;
+    padding: 5px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.length  input{
+    position: relative;
+    top: -12px;
+    left: 21px;
+    width: 171px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: var(--greydefault, #E6E6E6);
+    margin-right: 12px;
+    padding: 5px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.breadth  input{
+    position: relative;
+    top: -12px;
+    left: 9px;
+    width: 171px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: var(--greydefault, #E6E6E6);
+    padding: 5px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.height  input{
+    position: relative;
+    top: -12px;
+    left: 21px;
+    width: 171px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    background: var(--greydefault, #E6E6E6);
+    margin-right: 12px;
+    padding: 5px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.input{
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.or{
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    position: absolute;
+    top: 325px;
+    left: 700px;
+    z-index: 1;
+}
+
+.radio-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    width: 341px;
+    height: 90px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--GREY-DEFAULT, #E6E6E6);
+    z-index: 1;
+}
+
+/* Style for the radio buttons when selected */
+.radio-button input[type="radio"]:checked + .radio-button + .btn {
+    background-color: #7246FD;
+}
+
+
+.radio-button input[type="radio"]:checked + label {
+    background-color: #e74c3c;
+    color: red;
+}
+
+/* Hide the actual radio buttons */
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+/* Add hover effect */
+.radio-button:hover {
+    background-color: #7246FD;
+    color: white;
+}

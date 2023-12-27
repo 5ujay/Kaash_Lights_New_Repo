@@ -1,0 +1,247 @@
+.light{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+body{
+    background-color: white;
+}
+
+.need-light{
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.6px;
+    position: relative;
+    top: -15px;
+    left: 160px;
+    overflow-y: hidden;
+}
+
+.flexbox-container {
+    position: absolute;
+    left: 150px;
+    overflow-y: hidden;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch;
+    justify-content: center; */
+    z-index: 1;
+}
+  
+  .flexbox-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flexbox-item{
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.checkboxes{
+    height: 160px;
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;   
+}
+
+.checkboxes p {
+    padding-top: 10px;
+    line-height: 110%;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110.5%; /* 21.33px */
+    letter-spacing: 0.54px;
+}
+
+.checkboxes:hover{
+    background-color: #6234F4;
+    color: white;
+}
+
+#ceiling-re:hover img{
+    content: url('../images/Ceiling\ recessedhover.png');
+}
+
+#ceiling-sur:hover img{
+    content: url('../images/Ceiling\ surfacehover.png');
+}
+
+#ceiling-pe:hover img{
+    content: url('../images/Ceiling\ pendanthover.png');
+}
+
+#ceiling-trac:hover img{
+    content: url('../images/Ceilng\ trackhover.png');
+}
+
+#wall-rec:hover img{
+    content: url('../images/Wall\ recessedhover.png');
+}
+
+#wall-surf:hover img{
+    content: url('../images/Wall\ surfacehover.png');
+}
+
+#floor-stan:hover img{
+    content: url('../images/Floor\ standinghover.png');
+}
+
+#floor-groun:hover img{
+    content: url('../images/Floor\ in-groundhover.png');
+}
+
+#underwate:hover img{
+    content: url('../images/Underwaterhover.png');
+}
+
+#undershel:hover img{
+    content: url('../images/Under\ shelfhover.png');
+}
+
+#ceiling-cov:hover img{
+    content: url('../images/Ceiling\ covehover.png');
+}
+
+#wall-cov:hover img{
+    content: url('../images/Wall\ covehover.png');
+}
+
+.flexbox-item > button {
+    padding: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .flexbox-item > button:hover{
+    border: black;
+    color: white;
+  }
+
+img{
+    outline: none;
+}
+
+  
+#back-btn{
+    display: flex;
+    width: 142px;
+    height: 47px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    border: 3px solid var(--default, #7246FD);
+    background: #FFF;
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.16);
+    color: var(--default, #7246FD);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+#back-btn:hover{
+    background-color: #7246FD;
+    color: white;
+}
+
+#back-btn:hover img{
+    content: url('../images/backhover.png');
+}
+
+#next-btn{
+    display: flex;
+    width: 142px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    background: var(--default, #7246FD);
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.16);
+    border: none;
+    height: 47px;
+    color: var(--default, white);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+/* #next-btn:hover{
+    background-color: white;
+    color: #7246FD;
+}
+
+#next-btn:hover img{
+    content: url('../images/nexthover.png');
+} */
+
+
+.btn-container{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 585px;
+    left: 166px;
+    padding-bottom: 10px;
+}
+
+.progress-cont1{
+    /* display: inline-block; */
+    display: flex;
+    gap: 3px;
+    height: 15px;
+    position: absolute;
+    top: 625px;
+    left: 800px;
+}
+
+.first-num{
+    color: #7246FD;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+
+}
+
+.second-num{
+    color: rgba(114, 70, 253, 0.35);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.num-cont{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -7px;
+    left: 4px;
+}
