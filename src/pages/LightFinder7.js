@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import filedrop from "../images/file-drop1.png";
 import { RxCross2 } from "react-icons/rx";
+import ellpise_lighfinder_bg1 from "../images/ellpise_lighfinder_bg1.png";
+import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
 const LightFinder7 = () => {
   // ========== euro value setup ==========
   const [euro, setEuro] = useState(0);
@@ -65,7 +67,17 @@ const LightFinder7 = () => {
   return (
     <>
       <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-32 py-20">
-        <div>
+        <img
+          src={ellpise_lighfinder_bg1}
+          className="absolute overflow-hidden right-0 ms-auto"
+          alt=""
+        />
+        <img
+          src={ellpise_lighfinder_bg2}
+          className="absolute overflow-hidden left-0 ms-auto"
+          alt=""
+        />
+        <div className="relative">
           <p className="text-sm sm:text-base lg:text-xl">
             7. &nbsp; Upload files (if any). Images, Photos, Plan, Drawings, 3D
             Models, Notes etc.

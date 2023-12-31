@@ -75,7 +75,7 @@ const LightFinder2 = () => {
   };
   const renderDiv = (category, imageSrc, label) => (
     <div
-      className={`bg-${
+      className={` bg-${
         selectedCategory === category ? "[#7246FD]" : "white"
       } w-3/4 p-4 flex flex-col items-center justify-center rounded-md`}
       onClick={() => handleSelect(category)}
@@ -99,7 +99,7 @@ const LightFinder2 = () => {
         <img
           style={getCategoryStyle(category)}
           id={`image-${category}`}
-          className="w-16 box "
+          className="w-16"
           src={imageSrc}
           alt=""
         />
@@ -245,7 +245,7 @@ const LightFinder2 = () => {
                 )
               }
             >
-              {renderDiv("Home", Office3_default, "Home")}
+              {renderDiv("Home", Home_default, "Home")}
             </div>
             {renderDiv("Office", Office3_default, "Office")}
             {renderDiv("Hotel", Hotel_default, "Hotel")}

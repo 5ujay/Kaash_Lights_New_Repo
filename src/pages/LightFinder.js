@@ -1,102 +1,75 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import One from "../images/One_lightfinder_srno.png";
-import Two from "../images/Two_lightfinder_srno.png";
-import Three from "../images/Three_lightfinder_srno.png";
 import "./LightFinder.css";
 import { Link } from "react-router-dom";
 import Navbargrey from "../Components/Navbargrey";
 import Ellpise_lightfinder_purple from "../images/EllipseFinderpurple.png";
 const LightFinder = () => {
-  const lightStyles = {
-    LightImg: {
-      backgroundImage: "url('../images/EllipseFinderpurple.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      width: "100%",
-    },
-  };
   return (
     <>
-      <div>
-        <Navbargrey />
-      </div>
-      <div className="relative bg-[#E4E4E7] h-full w-full">
-        <section
-          style={{
-            ...lightStyles.LightImg,
-            backgroundImage: `url(${Ellpise_lightfinder_purple})`,
-          }}
-          className="md:pb-64 bg-[#E4E4E7]"
-        >
-          <div className="px-8 sm:px-24">
-            {/* <div className="bg-[#E4E4E7] w-full">
-              <img
-                className="absolute right-0 w-2/4"
-                src={Ellpise_lightfinder_purple}
-                alt=""
-              />
-            </div> */}
-            <div className="py-24">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl">Light finder</h1>
-              <h2 className="pt-12 text-base sm:text-lg sm:px-4">
-                Light finder is a digital tool to help you find the perfect{" "}
-                <br />
-                lighting solution for your home, office, shop, or any other
-                project.
-              </h2>
+      <section className="bg-[#E4E4E7]  w-full h-full">
+        {/* ============navbar============= */}
+        <div>
+          <Navbargrey />
+        </div>
+        <img
+          class="absolute right-0 w-96 md:w-1/2 ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] "
+          src={Ellpise_lightfinder_purple}
+          alt="ellipes"
+        />
+        <div className="text-black relative py-12 px-10 sm:px-16 md:px-24">
+          <div className="">
+            <h1 className="text-3xl sm:text-5xl md:text-8xl lg:text-9xl font-light">
+              Light Finder
+            </h1>
+            <h2 className="pt-6 sm:pt-12 text-sm sm:text-base lg:text-lg">
+              Light finder is a digital tool to help you find the perfect <br />
+              lighting solution for your home, office, shop, or any other
+              project.
+            </h2>
+          </div>
 
-              <div className="sm:px-4 pt-6">
-                <h3 className="text-lg font-bold">How does it work ?</h3>
-
-                <div className="flex flex-row items-center gap-5 py-4">
-                  <div>
-                    <img className="sm:w-8 md:w-fit" src={One} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm lg:text-base w-60 sm:w-full">
-                      Answer 5 simple questions.
-                    </p>
-                  </div>
+          <div className="pt-6">
+            <p className="text-lg font-semibold">How does it Work?</p>
+            <div>
+              <div className="flex flex-row items-center gap-5 py-4">
+                <div className="bg-[#7246FD] text-white w-8 h-8 rounded-full flex justify-center items-center">
+                  <p>1</p>
                 </div>
+                <p className="text-xs sm:text-sm lg:text-base w-60 sm:w-full">
+                  Answer 5 simple questions.
+                </p>
+              </div>
 
-                <div className="flex flex-row items-center gap-5 py-4">
-                  <div>
-                    <img className="sm:w-8  md:w-fit" src={Two} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm lg:text-base w-60 sm:w-96 lg:w-2/4">
-                      Upload visual information of your project, where you need
-                      light. Share any photographs, architectural plans, 3d
-                      models.
-                    </p>
-                  </div>
+              <div className="flex flex-row items-center gap-5 py-4">
+                <div className="bg-[#7246FD] text-white w-8 h-8 rounded-full flex justify-center items-center">
+                  <p>2</p>
                 </div>
+                <p className="text-xs sm:text-sm lg:text-base w-60 sm:w-full">
+                  Upload visual information of your project, where you need
+                  light. Share any photographs, architectural plans, 3D models.
+                </p>
+              </div>
 
-                <div className="flex flex-row items-center gap-5 py-4">
-                  <div>
-                    <img className="sm:w-8 md:w-fit" src={Three} alt="" />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm lg:text-base w-60 md:w-full">
-                      Submit and our team will contact you with a solution.
-                    </p>
-                  </div>
+              <div className="flex flex-row items-center gap-5 py-4">
+                <div className="bg-[#7246FD] text-white w-8 h-8 rounded-full flex justify-center items-center">
+                  <p>3</p>
                 </div>
-
-                <div className="pt-16">
-                  <Link to="/lightfinder2">
-                    <button className="bg-[#7246FD] px-16 py-3 text-white text-xl">
-                      Start
-                    </button>
-                  </Link>
-                </div>
+                <p className="text-xs sm:text-sm lg:text-base w-60 sm:w-full">
+                  Submit, and our team will contact you with a solution.
+                </p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+
+          <div className="pt-16">
+            <Link to="/lightfinder2">
+              <button className="bg-[#7246FD] px-14 py-2 text-white text-xl">
+                Start
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

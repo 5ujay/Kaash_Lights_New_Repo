@@ -1,19 +1,20 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import One from "../images/PurpOne.png";
-import Two from "../images/PurpTwo.png";
-import Three from "../images/PurpThree.png";
 import "./LightFinder9.css";
 import { Link } from "react-router-dom";
 import download from "../images/downloadarrow.png";
+import ellpise_lightfinder_report_bg from "../images/ellpise_lightfinder_report_bg.png";
 
 const LightFinder9 = () => {
   return (
-    <div className="bg-[#e4e4e7] px-24">
-      <div className="pt-40 pb-24 flex flex-col items-center justify-center gap-5">
+    <div className="bg-[#e4e4e7]">
+      <img
+        src={ellpise_lightfinder_report_bg}
+        className="absolute top-0 ms-auto"
+        alt=""
+      />
+      <div className="relative pt-40 pb-24 flex flex-col items-center justify-center gap-5">
         <div>
-          <h1 className="text-[#7246FD] text-8xl lg:text-9xl font-light">
+          <h1 className="text-[#7246FD] text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light">
             Thank You !
           </h1>
         </div>
@@ -29,8 +30,8 @@ const LightFinder9 = () => {
           </button>
         </div>
         <div className="w-3/4 mx-auto border-t-2 border-[#7246FD] my-4"></div>
-        <div>
-          <p className="">
+        <div className="flex justify-center">
+          <p className="px-10 md:px-0 text-center">
             In the meantime you can browse through other projects to explore
             more about light!
           </p>

@@ -1,4 +1,4 @@
-.box:hover {
+.box:hover .icon {
   background: linear-gradient(
     to bottom,
     transparent 4.48%,
