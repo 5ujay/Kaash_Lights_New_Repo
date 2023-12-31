@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import './LengthDropdown.css';
+import React, { useState } from "react";
+import "./LengthDropdown.css";
 
 const LengthDropdown = () => {
-  const [selectedUnit, setSelectedUnit] = useState('cm');
-  const lengthUnits = ['cm', 'm', 'km', 'in', 'ft', 'yd', 'mi'];
+  const [selectedUnit, setSelectedUnit] = useState("m");
+  const lengthUnits = ["m", "cm", "km", "in", "ft", "yd", "mi"];
 
   const handleUnitChange = (event) => {
     setSelectedUnit(event.target.value);
   };
 
   return (
-    <div>
+    <div className="bg-[#E4E4E7]">
       <select
         id="length-dropdown"
         value={selectedUnit}
         onChange={handleUnitChange}
+        className="outline-none  py-3 px-1 rounded-lg"
       >
         {lengthUnits.map((unit) => (
           <option key={unit} value={unit}>

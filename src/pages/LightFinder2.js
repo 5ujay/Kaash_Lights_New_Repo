@@ -63,11 +63,6 @@ const LightFinder2 = () => {
       // If no, select the category
       setSelectedCategory(category);
     }
-    // const selectedImg = document.getElementById("image");
-    // if (selectedImg) {
-    //   selectedImg.style.background =
-    //     "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)";
-    // }
   };
 
   const getCategoryStyle = (category) => {

@@ -1,377 +1,167 @@
-import React from "react";
-import { useState } from "react";
-import Navbar from "../Components/Navbar";
-import { Link } from "react-router-dom";
-import "./LightFinder7.css";
+import React, { useState } from "react";
 import filedrop from "../images/file-drop1.png";
-import backbtn from "../images/backbtn.png";
-import nextbtn from "../images/nextbtn.png";
-import progress1 from "../images/progress1.png";
-import progresslast from "../images/progresslast.png";
-import prrectblue from "../images/prrectblue.png";
-import deco from "../images/deco positions.png";
-
+import { RxCross2 } from "react-icons/rx";
 const LightFinder7 = () => {
-  const [sliderValue, setSliderValue] = useState(0);
-
-  const handleSliderChange = (event) => {
-    setSliderValue(event.target.value);
+  // ========== euro value setup ==========
+  const [euro, setEuro] = useState(0);
+  const handleChange = (event) => {
+    setEuro(event.target.value);
+  };
+  const handleInputChange = (event) => {
+    let inputValue = event.target.value.replace(/€/g, "");
+    // Ensure the input value is a valid number and within the desired range
+    inputValue = Math.min(999999, Math.max(0, Number(inputValue)));
+    setEuro(inputValue);
   };
 
-  const inputStyle = {
-    color: "white", // Text color
-    backgroundColor: "#7246FD", // Background color
-    border: "none", // Remove the default border
-    borderRadius: "5px", // Add some border radius for styling
-    padding: "5px", // Add padding for better appearance
+  // ========== Popup Value and drag and drop options ==========
+  const [openpopups, setOpenpopups] = useState([false, false]);
+  const [files, setFiles] = useState([null, null]);
+
+  const open = (index) => {
+    const newOpenpopups = [...openpopups];
+    newOpenpopups[index] = true;
+    setOpenpopups(newOpenpopups);
   };
 
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const handleFileInputChange = (event) => {
-    const file = event.target.files[0];
-    setSelectedFile(file);
+  const close = (index) => {
+    const newOpenpopups = [...openpopups];
+    newOpenpopups[index] = false;
+    setOpenpopups(newOpenpopups);
   };
 
-  const handleFileDrop = (event) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    setSelectedFile(file);
+  const handleFile = (index, e) => {
+    const newFiles = [...files];
+    newFiles[index] = e.target.files[0];
+    setFiles(newFiles);
+    close(index); // Close the popup on file selection
   };
 
-  const handleDragOver = (event) => {
-    event.preventDefault();
+  const handleDragOver = (e) => {
+    e.preventDefault();
   };
 
-  const clearSelectedFile = () => {
-    setSelectedFile(null);
+  const handleDrop = (index, e) => {
+    e.preventDefault();
+    const droppedFile = e.dataTransfer.files[0];
+    const newFiles = [...files];
+    newFiles[index] = droppedFile;
+    setFiles(newFiles);
+    close(index); // Close the popup on file drop
   };
 
-  const [selectedFile1, setSelectedFile1] = useState(null);
+  const addMore = () => {
+    const newIndex = files.length;
+    setFiles([...files, null]);
+    setOpenpopups([...openpopups, false]);
 
-  const handleFileInputChange1 = (event) => {
-    const file = event.target.files[0];
-    setSelectedFile1(file);
-  };
-
-  const handleFileDrop1 = (event) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    setSelectedFile1(file);
-  };
-
-  const handleDragOver1 = (event) => {
-    event.preventDefault();
-  };
-
-  const clearSelectedFile1 = () => {
-    setSelectedFile1(null);
-  };
-
-  const [selectedFile2, setSelectedFile2] = useState(null);
-
-  const handleFileInputChange2 = (event) => {
-    const file = event.target.files[0];
-    setSelectedFile2(file);
-  };
-
-  const handleFileDrop2 = (event) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    setSelectedFile2(file);
-  };
-
-  const handleDragOver2 = (event) => {
-    event.preventDefault();
-  };
-
-  const clearSelectedFile2 = () => {
-    setSelectedFile2(null);
-  };
-
-  const [show, setShow] = useState(false);
-  const [showw, setShoww] = useState(false);
-  const [showww, setShowww] = useState(false);
-
-  const [buttons, setButtons] = useState([]);
-  const [buttons1, setButtons1] = useState([]);
-
-  const addMoreButton = () => {
-    console.log(buttons);
-    setButtons([
-      ...buttons,
-      <button
-        key={buttons.length}
-        className={"upload-btn1"}
-        onClick={() => setShowww(true)}
-      >
-        Upload
-      </button>,
-    ]);
-    setButtons1([
-      ...buttons1,
-      <button
-        key={buttons1.length}
-        className={"upload-btn2"}
-        onClick={() => setShowww(true)}
-      >
-        Upload
-      </button>,
-    ]);
+    // Hide the last "Add More" button if the maximum count is reached (2)
+    if (newIndex >= 2) {
+      document.getElementById(`addMoreButton${newIndex}`).style.display =
+        "none";
+    }
   };
 
   return (
-    <div>
-      <Navbar />
-      <div className="need-light">
-        7. Upload files (if any). Images, Photos, Plan, Drawings, 3D Models,
-        Notes etc.
-      </div>
-      <div className="btn-contain">
-        <button className="upload-btn" onClick={() => setShow(true)}>
-          Upload
-        </button>
-        <button className="upload-btn" onClick={() => setShoww(true)}>
-          Upload
-        </button>
-        {buttons.map((button, index) => (
-          <div key={index}>{button} </div>
-        ))}
-      <button onClick={addMoreButton} className="add-more">
-        + Add More
-      </button>
-      </div>
-      <div>
-        {show ? (
-          <div>
-            {selectedFile ? (
-              <div className="file-info1">
-                <p>{selectedFile.name}</p>
-                <button onClick={clearSelectedFile} className="file-cross">
-                  ✖
+    <>
+      <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-32 py-20">
+        <div>
+          <p className="text-sm sm:text-base lg:text-xl">
+            7. &nbsp; Upload files (if any). Images, Photos, Plan, Drawings, 3D
+            Models, Notes etc.
+          </p>
+          <div className="text-lg sm:text-xl text-white grid w-fit gap-6 pt-10">
+            {files.map((file, index) => (
+              <div key={index}>
+                <button
+                  onClick={() => open(index)}
+                  className="bg-[#7246FD] px-6 sm:px-10 py-1 sm:py-3"
+                >
+                  Upload
                 </button>
+                {file && <div className="text-black text-sm">{file.name}</div>}
               </div>
-            ) : (
-              <>
-                <div className="file-drop">
-                  <div className="upload-text">
-                    Upload File
-                    <button className="cross" onClick={() => setShow(false)}>
-                      ✖
-                    </button>
-                  </div>
-                  <div
-                    onDrop={handleFileDrop}
-                    onDragOver={handleDragOver}
-                    style={{
-                      height: "350px",
-                      width: "700px",
-                      position: "relative",
-                      top: "7px",
-                      left: "25px",
-                      background: "#FFF",
-                      border: "4px dashed #7246FD",
-                      margin: "20px",
-                      padding: "20px",
-                      textAlign: "center",
-                      cursor: "pointer",
-                      borderRadius: "25px",
-                      zIndex: "1",
-                    }}
-                  >
-                    <input
-                      type="file"
-                      accept=".pdf, .doc, .docx, .jpg, .jpeg, .png"
-                      onChange={handleFileInputChange}
-                      style={{ display: "none" }}
-                      id="fileInput"
-                    />
-                    <label htmlFor="fileInput" className="fileInput">
-                      <img src={filedrop} className="fileimg" />
-                      <p className="drag">
-                        Drag and drop your file here or <span>browse.</span>
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </>
+            ))}
+            {files.length < 2 && (
+              <button
+                className="text-[#7246FD] text-start px-10 py-3"
+                onClick={addMore}
+              >
+                + Add More
+              </button>
             )}
           </div>
-        ) : null}
-      </div>
 
-      <div>
-        {showw ? (
-          <div>
-            {selectedFile1 ? (
-              <div className="file-info2">
-                <p>{selectedFile1.name}</p>
-                <button onClick={clearSelectedFile1} className="file-cross">
-                  ✖
-                </button>
-              </div>
-            ) : (
-              <>
-                <div className="file-drop">
-                  <div className="upload-text">
-                    Upload File
-                    <button className="cross" onClick={() => setShoww(false)}>
-                      ✖
-                    </button>
-                  </div>
-                  <div
-                    onDrop={handleFileDrop1}
-                    onDragOver={handleDragOver1}
-                    style={{
-                      height: "350px",
-                      width: "700px",
-                      position: "relative",
-                      top: "7px",
-                      left: "25px",
-                      background: "#FFF",
-                      border: "4px dashed #7246FD",
-                      margin: "20px",
-                      padding: "20px",
-                      textAlign: "center",
-                      cursor: "pointer",
-                      borderRadius: "25px",
-                      zIndex: "1",
-                    }}
-                  >
-                    <input
-                      type="file"
-                      accept=".pdf, .doc, .docx, .jpg, .jpeg, .png"
-                      onChange={handleFileInputChange1}
-                      style={{ display: "none" }}
-                      id="fileInput"
-                    />
-                    <label htmlFor="fileInput" className="fileInput">
-                      <img src={filedrop} className="fileimg" />
-                      <p className="drag">
-                        Drag and drop your file here or <span>browse.</span>
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </>
-            )}
+          <div className="pt-16">
+            <p className="text-sm sm:text-base lg:text-xl">
+              8. &nbsp; Do you have a budget in mind, if not our team will help
+              you identify one.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-5 md:gap-10 pt-10">
+              <input
+                type="range"
+                min={0}
+                max={999999}
+                value={euro}
+                onChange={handleChange}
+                className=" w-4/5 md:w-1/2 mt-4"
+              />
+              <input
+                type="text"
+                value={euro + "€"}
+                onChange={handleInputChange}
+                className="mt-4 p-2 text-center text-lg border border-gray-400"
+              />
+            </div>
           </div>
-        ) : null}
-      </div>
-
-      <div>
-        {showww ? (
-          <div>
-            {selectedFile2 ? (
-              <div className="file-info3">
-                <p>{selectedFile2.name}</p>
-                <button onClick={clearSelectedFile2} className="file-cross">
-                  ✖
-                </button>
-              </div>
-            ) : (
-              <>
-                <div className="file-drop">
-                  <div className="upload-text">
-                    Upload File
-                    <button className="cross" onClick={() => setShowww(false)}>
-                      ✖
-                    </button>
-                  </div>
-                  <div
-                    onDrop={handleFileDrop2}
-                    onDragOver={handleDragOver2}
-                    style={{
-                      height: "350px",
-                      width: "700px",
-                      position: "relative",
-                      top: "7px",
-                      left: "25px",
-                      background: "#FFF",
-                      border: "4px dashed #7246FD",
-                      margin: "20px",
-                      padding: "20px",
-                      textAlign: "center",
-                      cursor: "pointer",
-                      borderRadius: "25px",
-                      zIndex: "1",
-                    }}
-                  >
-                    <input
-                      type="file"
-                      accept=".pdf, .doc, .docx, .jpg, .jpeg, .png"
-                      onChange={handleFileInputChange2}
-                      style={{ display: "none" }}
-                      id="fileInput"
-                    />
-                    <label htmlFor="fileInput" className="fileInput">
-                      <img src={filedrop} className="fileimg" />
-                      <p className="drag">
-                        Drag and drop your file here or <span>browse.</span>
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        ) : null}
-      </div>
-
-      <div className="budget-line">
-        8. Do you have a budget in mind, if not our team will help you identify
-        one.
-      </div>
-      <div className="slider1">
-        <input
-          type="range"
-          min={0}
-          max={999999999}
-          value={sliderValue}
-          onChange={handleSliderChange}
-          className="slide1"
-          style={inputStyle}
-        />
-        <input
-          type="text"
-          value={sliderValue + "€"}
-          onChange={(event) => setSliderValue(event.target.value)}
-          className="slide-value1"
-        />
-      </div>
-
-      <div className="btn-container">
-        {/* <button className="button1" id='start-btn' onClick={handleButtonClick}>Start</button> */}
-
-        <Link to="/lightfinder6">
-          <button className="back-btn" id="back-btn">
-            <img src={backbtn} />
-            Back
-          </button>
-        </Link>
-        <Link to="/lightfinder8">
-          <button className="next-btn" id="next-btn">
-            Next
-            <img src={nextbtn} />
-          </button>
-        </Link>
-      </div>
-
-      <div className="progress-cont1">
-        <img src={progress1} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={progresslast} />
-        <div className="num-cont">
-          <p className="first-num">6</p>
-          <p className="second-num">/7</p>
         </div>
       </div>
-      <img src={deco} className="deco" />
-    </div>
+      {openpopups.map(
+        (isOpen, index) =>
+          isOpen && (
+            <div
+              key={index}
+              className="py-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 bg-white p-4 rounded-lg shadow-lg"
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(index, e)}
+            >
+              <div className="flex justify-between py-2">
+                <p className="text-base md:text-xl">Upload file</p>
+                <button
+                  onClick={() => close(index)}
+                  className=" text-xl sm:text-4xl"
+                >
+                  <RxCross2 />
+                </button>
+              </div>
+              <div className="border-dashed border-2 border-[#7246FD] h-80 flex flex-col items-center justify-center">
+                <div className="w-14 md:w-24 lg:w-fit">
+                  {/* Placeholder for your filedrop icon */}
+                  <img src={filedrop} alt="" />
+                </div>
+                <div className="text-center text-sm md:text-base lg:text-lg pt-4 cursor-pointer">
+                  <p>
+                    Drag and drop your file here or
+                    <label
+                      htmlFor={`fileInput${index}`}
+                      className="text-[#7246FD]"
+                    >
+                      &nbsp; browse.
+                    </label>
+                  </p>
+
+                  <input
+                    type="file"
+                    id={`fileInput${index}`}
+                    className="hidden"
+                    onChange={(e) => handleFile(index, e)}
+                  />
+                </div>
+              </div>
+            </div>
+          )
+      )}
+    </>
   );
 };
 

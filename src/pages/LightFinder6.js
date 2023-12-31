@@ -1,112 +1,127 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import { Link } from "react-router-dom";
+// import Navbar from "../Components/Navbar";
+// import { Link } from "react-router-dom";
 import "./LightFinder6.css";
 
-import backbtn from "../images/backbtn.png";
-import nextbtn from "../images/nextbtn.png";
+// import backbtn from "../images/backbtn.png";
+// import nextbtn from "../images/nextbtn.png";
 
-import progress1 from "../images/progress1.png";
-import progressblackrect from "../images/progressblackrect.png";
-import progresslast from "../images/progresslast.png";
+// import progress1 from "../images/progress1.png";
+// import progressblackrect from "../images/progressblackrect.png";
+// import progresslast from "../images/progresslast.png";
 
-import prrectblue from "../images/prrectblue.png";
+// import prrectblue from "../images/prrectblue.png";
 import LengthDropdown from "../Components/LengthDropdown";
-import AreaDropdown from "../Components/areaDropdown";
-import deco from "../images/deco positions.png";
+// import AreaDropdown from "../Components/areaDropdown";
+// import deco from "../images/deco positions.png";
 
 const LightFinder6 = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="need-light">5. Choose the application area.</div>
-
-      {/* <select className='flex-container'>
-            <option className='btn'>Interior</option>
-            <option className='btn'>Exterior</option>
-            <option className='btn'>Mix-use</option>
-        </select> */}
-      <div className="flex-container">
-        <label class="radio-button">
-          <input type="radio" name="options" value="Interior" className="btn" />
-          Interior
-        </label>
-        <label class="radio-button">
-          <input type="radio" name="options" value="Exterior" className="btn" />
-          Exterior
-        </label>
-        <label class="radio-button">
-          <input type="radio" name="options" value="Mix-use" className="btn" />
-          Mix-use
-        </label>
-      </div>
-
-      <div className="need-light1">6. Enter space dimensions or area.</div>
-
-      <div className="dimensions">
-        <div className="length">
-          <span>Length</span>
-          <div className="input">
-            <input type="number" min="0"></input>
-            <LengthDropdown />
+    <div className="bg-[#e4e4e7] h-full w-full">
+      <div className="px-10 sm:px-20 lg:px-28 pt-24">
+        {/* ====== 6th point ====== */}
+        <div>
+          <div>
+            <p className="text-lg md:text-xl">
+              5. &nbsp; Choose the application area.
+            </p>
+          </div>
+          <div className="flex flex-row gap-2 md:gap-20 text-base md:text-lg pt-8 pl-8">
+            <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <p>Interior</p>
+            </div>
+            <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <p>Exterior</p>
+            </div>
+            <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <p>Mix-use</p>
+            </div>
           </div>
         </div>
-        <div className="breadth">
-          <span>Breadth</span>
-          <div className="input">
-            <input type="number" min="0"></input>
-            <LengthDropdown />
+
+        {/* ======7th point ====== */}
+        <div className="pt-16">
+          <div>
+            <p className="text-lg md:text-xl">
+              6. &nbsp; Enter space dimensions or area.
+            </p>
+          </div>
+
+          <div className="pt-10 flex flex-col xl:flex-row text-base lg:text-xl">
+            <div className="sm:pl-8 grid gap-8 ">
+              <div className="flex flex-row items-center">
+                <span className="w-20 md:w-28">Length</span>
+                <div className="flex justify-center items-center gap-6 xl:gap-10">
+                  <input
+                    className="py-3 md:w-48 px-2 w-32"
+                    type="number"
+                    min="0"
+                  ></input>
+                  <LengthDropdown />
+                </div>
+              </div>
+
+              <div className="flex items-center ">
+                <span className="w-20 md:w-28">Breadth</span>
+                <div className="flex justify-center items-center gap-6 xl:gap-10">
+                  <input
+                    className="py-3 md:w-48 px-2 w-32"
+                    type="number"
+                    min="0"
+                  ></input>
+                  <LengthDropdown />
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <span className="w-20 md:w-28">Height</span>
+                <div className="flex justify-center items-center gap-6 xl:gap-10">
+                  <input
+                    className="py-3 md:w-48 px-2 w-32"
+                    type="number"
+                    min="0"
+                  ></input>
+                  <LengthDropdown />
+                </div>
+              </div>
+
+              <div className="sm:hidden flex items-center">
+                <span className="w-20 md:w-28">Area</span>
+                <div className="flex justify-center items-center gap-6 xl:gap-10">
+                  <input
+                    className="py-3 md:w-48 px-2 w-32"
+                    type="number"
+                    min="0"
+                  ></input>
+                  <LengthDropdown />
+                </div>
+              </div>
+            </div>
+
+            <div className="pl-8 ">
+              <ul class=" hidden xl:flex flex-col items-center mx-10">
+                <li class=" h-32 border-l border-[#000000] font-medium"></li>
+                <li class="my-4 text-xl font-semibold">OR</li>
+                <li class="h-28 border-l border-[#000000] font-medium"></li>
+              </ul>
+            </div>
+
+            <div className="hidden sm:block sm:pl-8 pt-8 xl:pt-0  ">
+              <div className="flex items-center">
+                <span className="w-20 md:w-28">Area</span>
+                <div className="flex justify-center items-center gap-6 xl:gap-10">
+                  <input
+                    className="py-3 md:w-48 px-2 w-32"
+                    type="number"
+                    min="0"
+                  ></input>
+                  <LengthDropdown />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="height">
-          <span>Height</span>
-          <div className="input">
-            <input type="number" min="0"></input>
-            <LengthDropdown />
-          </div>
-        </div>
       </div>
-
-      <p className="or">OR</p>
-
-      <div className="area">
-        <span>Area</span>
-        <div className="input">
-          <input type="number" min="0"></input>
-          <AreaDropdown />
-        </div>
-      </div>
-
-      <div className="btn-container">
-        {/* <button className="button1" id='start-btn' onClick={handleButtonClick}>Start</button> */}
-        <Link to="/lightfinder5">
-          <button className="back-btn" id="back-btn">
-            <img src={backbtn} />
-            Back
-          </button>
-        </Link>
-        <Link to="/lightfinder7">
-          <button className="next-btn" id="next-btn">
-            Next
-            <img src={nextbtn} />
-          </button>
-        </Link>
-      </div>
-
-      <div className="progress-cont1">
-        <img src={progress1} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={prrectblue} />
-        <img src={progressblackrect} />
-        <img src={progresslast} />
-        <div className="num-cont">
-          <p className="first-num">5</p>
-          <p className="second-num">/7</p>
-        </div>
-      </div>
-      <img src={deco} className="deco" />
     </div>
   );
 };

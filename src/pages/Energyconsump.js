@@ -267,26 +267,26 @@
 // };
 // export default Energyconsump;
 
-import { React, useState, useEffect, useRef } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import Navbar from '../Components/Navbar';
+import { React, useState, useEffect, useRef } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 
 const Energyconsump = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    selectedCountry: '',
-    hoursOfUse: '',
-    daysOfUse: '',
+    selectedCountry: "",
+    hoursOfUse: "",
+    daysOfUse: "",
     lightingControl: false,
-    lightingControlDetails: '',
+    lightingControlDetails: "",
     infrastructureNo: false,
   });
 
   const countriesList = [
-    { code: 'FR', name: 'France', footprintEfficiency: 0.74 },
-    { code: 'GM', name: 'Germany', footprintEfficiency: 0.54 },
-    { code: 'IN', name: 'India', footprintEfficiency: 0.64 },
-    { code: 'LU', name: 'Luxembourg', footprintEfficiency: 0.61 },
+    { code: "FR", name: "France", footprintEfficiency: 0.74 },
+    { code: "GM", name: "Germany", footprintEfficiency: 0.54 },
+    { code: "IN", name: "India", footprintEfficiency: 0.64 },
+    { code: "LU", name: "Luxembourg", footprintEfficiency: 0.61 },
     // Add more countries as needed...
   ];
 
@@ -295,12 +295,12 @@ const Energyconsump = () => {
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
-    const newValue = type === 'checkbox' ? checked : value;
-    if (name === 'lightingControl') {
+    const newValue = type === "checkbox" ? checked : value;
+    if (name === "lightingControl") {
       setFormData({
         ...formData,
         lightingControl: newValue,
-        lightingControlDetails: newValue ? '' : 'N/A',
+        lightingControlDetails: newValue ? "" : "N/A",
       });
     } else {
       setFormData({
@@ -374,11 +374,11 @@ const Energyconsump = () => {
           country: formData.selectedCountry,
           hoursOfUse: formData.hoursOfUse,
           daysOfUse: formData.daysOfUse,
-          lightingControl: formData.lightingControl ? 'Yes' : 'No',
+          lightingControl: formData.lightingControl ? "Yes" : "No",
           lightingControlDetails: formData.lightingControl
             ? formData.lightingControlDetails
-            : 'N/A',
-          infrastructure: formData.infrastructureNo ? 'No' : 'Yes',
+            : "N/A",
+          infrastructure: formData.infrastructureNo ? "No" : "Yes",
           energyConsumption: Number(energyConsumption.toFixed(0)),
         };
 
@@ -395,19 +395,19 @@ const Energyconsump = () => {
         ); // Start with an initial value of 1
 
         setFormData({
-          selectedCountry: '',
-          hoursOfUse: '',
-          daysOfUse: '',
+          selectedCountry: "",
+          hoursOfUse: "",
+          daysOfUse: "",
           lightingControl: false,
-          lightingControlDetails: '',
+          lightingControlDetails: "",
         });
 
         // Store or use the cumulative efficiency value
-        console.log('Cumulative Efficiency:', cumulativeEfficiency.toFixed(0));
+        console.log("Cumulative Efficiency:", cumulativeEfficiency.toFixed(0));
         // save this value or use it as needed
       }
     } else {
-      console.log('Please fill in all required fields.');
+      console.log("Please fill in all required fields.");
     }
   };
   return (
@@ -488,7 +488,7 @@ const Energyconsump = () => {
               {/* Lighting control */}
               <div className="my-5">
                 <label className="block my-1">
-                  Does your infrastructure support lighting control?{' '}
+                  Does your infrastructure support lighting control?{" "}
                   <span className="italic">
                     (e.g. Dimming or motion sensors)
                   </span>
@@ -565,7 +565,7 @@ const Energyconsump = () => {
               <div className="mr-4">
                 <button
                   className="bg-white px-12 border-2 border-[#03B829] py-1.5 text-[#03B829] text-xl"
-                  onClick={() => navigate('/Carbonemission')}
+                  onClick={() => navigate("/Carbonemission")}
                 >
                   Back
                 </button>
@@ -573,7 +573,7 @@ const Energyconsump = () => {
               <div>
                 <button
                   className="bg-[#03B829] border-2 border-[#03B829] px-12 py-1.5 text-white text-xl"
-                  onClick={() => navigate('/CCMoreinfo')}
+                  onClick={() => navigate("/CCMoreinfo")}
                 >
                   Next
                 </button>
