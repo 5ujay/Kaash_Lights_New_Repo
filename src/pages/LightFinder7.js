@@ -6,19 +6,18 @@ import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
 const LightFinder7 = () => {
   // ========== euro value setup ==========
   const [euro, setEuro] = useState(0);
+  const [openpopups, setOpenpopups] = useState([false]);
+  const [files, setFiles] = useState([null]);
+
   const handleChange = (event) => {
     setEuro(event.target.value);
   };
+
   const handleInputChange = (event) => {
     let inputValue = event.target.value.replace(/€/g, "");
-    // Ensure the input value is a valid number and within the desired range
     inputValue = Math.min(999999, Math.max(0, Number(inputValue)));
     setEuro(inputValue);
   };
-
-  // ========== Popup Value and drag and drop options ==========
-  const [openpopups, setOpenpopups] = useState([false, false]);
-  const [files, setFiles] = useState([null, null]);
 
   const open = (index) => {
     const newOpenpopups = [...openpopups];
@@ -36,7 +35,7 @@ const LightFinder7 = () => {
     const newFiles = [...files];
     newFiles[index] = e.target.files[0];
     setFiles(newFiles);
-    close(index); // Close the popup on file selection
+    close(index);
   };
 
   const handleDragOver = (e) => {
@@ -49,20 +48,13 @@ const LightFinder7 = () => {
     const newFiles = [...files];
     newFiles[index] = droppedFile;
     setFiles(newFiles);
-    close(index); // Close the popup on file drop
+    close(index);
   };
 
-  // const addMore = () => {
-  //   const newIndex = files.length;
-  //   setFiles([...files, null]);
-  //   setOpenpopups([...openpopups, false]);
-
-  //   // Hide the last "Add More" button if the maximum count is reached (2)
-  //   if (newIndex >= 2) {
-  //     document.getElementById(`addMoreButton${newIndex}`).style.display =
-  //       "none";
-  //   }
-  // };
+  const handleAddMore = () => {
+    setOpenpopups([...openpopups, false]);
+    setFiles([...files, null]);
+  };
 
   return (
     <>
@@ -94,7 +86,9 @@ const LightFinder7 = () => {
                 {file && <div className="text-black text-sm">{file.name}</div>}
               </div>
             ))}
-            <button className="text-[#7246FD] py-1">+ Add More</button>
+            <button className="text-[#7246FD] py-1" onClick={handleAddMore}>
+              + Add More
+            </button>
           </div>
 
           <div className="pt-16">

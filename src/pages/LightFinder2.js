@@ -107,7 +107,9 @@ const LightFinder2 = () => {
         />
       </div>
       <p
-        className={`pt-2 ${selectedCategory === category ? "text-white" : ""}`}
+        className={`pt-2 text-sm sm:text-base ${
+          selectedCategory === category ? "text-white" : ""
+        }`}
       >
         {label}
       </p>
@@ -269,18 +271,18 @@ const LightFinder2 = () => {
             <Navbargrey />
           </div>
           <div
-            className="px-28 md:pb-64 bg-[#E4E4E7]"
+            className="px-10 md:px-16 lg:px-28 md:pb-64 bg-[#E4E4E7]"
             style={{
               ...lightStyles.LightImg,
               backgroundImage: `url(${EllipseFinderdecobg})`,
             }}
           >
             <div>
-              <p className="pl-8 pt-8 text-lg">Where do you need light ?</p>
+              <p className="sm:pl-8 pt-8 text-lg">Where do you need light ?</p>
             </div>
 
             {/*===== images start here===== */}
-            <div className="text-black text-center grid grid-cols-7 gap-4 px-8 mt-5">
+            <div className="text-black text-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-4 sm:px-8 mt-5">
               <div
                 onClick={() =>
                   openPopup(
@@ -358,7 +360,7 @@ const LightFinder2 = () => {
               >
                 {renderDiv("Hotel", Hotel_default, "Hotel")}
               </div>
-              {renderDiv("Cafe", Cafe_default, "Cafe")}
+              <div>{renderDiv("Cafe", Cafe_default, "Cafe")}</div>
               <div
                 onClick={() =>
                   openPopup(
@@ -413,7 +415,6 @@ const LightFinder2 = () => {
               >
                 {renderDiv("Museum", Museum_default, "Museum")}
               </div>
-
               <div
                 onClick={() =>
                   openPopup(
@@ -441,6 +442,7 @@ const LightFinder2 = () => {
               >
                 {renderDiv("Factory", Factory_default, "Factory")}
               </div>
+
               <div
                 onClick={() =>
                   openPopup(
@@ -466,10 +468,14 @@ const LightFinder2 = () => {
               >
                 {renderDiv("Warehouse", Warehouse_default, "Warehouse")}
               </div>
-              {renderDiv("Corporate", Corporate_default, "Corporate")}
-              {renderDiv("Concert", Concert_default, "Concert")}
-              {renderDiv("Celebration", Celebration_default, "Celebration")}
-              {renderDiv("Sports", Sports_default, "Sports")}
+              <div>
+                {renderDiv("Corporate", Corporate_default, "Corporate")}
+              </div>
+              <div>{renderDiv("Concert", Concert_default, "Concert")}</div>
+              <div>
+                {renderDiv("Celebration", Celebration_default, "Celebration")}
+              </div>
+              <div>{renderDiv("Sports", Sports_default, "Sports")}</div>
               <div
                 onClick={() =>
                   openPopup(
@@ -503,13 +509,13 @@ const LightFinder2 = () => {
                 {renderDiv("Hospital", Hospital_default, "Hospital")}
               </div>
 
-              {renderDiv("Street", Street_default, "Street")}
-              {renderDiv("Park", Park_default, "Park")}
-              {renderDiv("Garden", Garden_default, "Garden")}
-              {renderDiv("Facade", Facade_default, "Facade")}
-              {renderDiv("Yactch", Yacht_default, "Yactch")}
-              {renderDiv("Airplane", Airplane_default, "Airplane")}
-              {renderDiv("Locomotives", Loco_default, "Locomotives")}
+              <div>{renderDiv("Street", Street_default, "Street")}</div>
+              <div>{renderDiv("Park", Park_default, "Park")}</div>
+              <div>{renderDiv("Garden", Garden_default, "Garden")}</div>
+              <div>{renderDiv("Facade", Facade_default, "Facade")}</div>
+              <div>{renderDiv("Yactch", Yacht_default, "Yactch")}</div>
+              <div>{renderDiv("Airplane", Airplane_default, "Airplane")}</div>
+              <div>{renderDiv("Locomotives", Loco_default, "Locomotives")}</div>
             </div>
 
             <div className=" px-8 mt-8 flex gap-5 ">
@@ -539,10 +545,10 @@ const LightFinder2 = () => {
             </button>
           </div>
           {/* Crossclick */}
-          <div className="grid grid-cols-2 w-fit gap-10 pt-5 text-xl">
+          <div className="grid sm:grid-cols-2 w-fit sm:gap-10 pt-5 text-xl">
             <p>Choose as applicable</p>
 
-            <div className="flex items-center gap-5">
+            <div className="flex flex-row items-center gap-5">
               <input
                 type="checkbox"
                 className="w-5 h-5"
@@ -552,7 +558,7 @@ const LightFinder2 = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 pt-5 gap-1  ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-5 gap-1  ">
             {renderCheckboxes()}
           </div>
 
