@@ -53,15 +53,18 @@ const LightFinder2 = () => {
 
   // selection of div..................................
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedDiv, setSelectedDiv] = useState(null);
 
   const handleSelect = (category) => {
     // Check if the category is already selected
     if (selectedCategory === category) {
       // If yes, remove the selection
       setSelectedCategory(null);
+      setSelectedDiv(null);
     } else {
       // If no, select the category
       setSelectedCategory(category);
+      setSelectedDiv(category);
     }
   };
 
@@ -73,29 +76,28 @@ const LightFinder2 = () => {
           : "white",
     };
   };
+
   const renderDiv = (category, imageSrc, label) => (
     <div
-      className={` bg-${
-        selectedCategory === category ? "[#7246FD]" : "white"
-      } w-3/4 p-4 flex flex-col items-center justify-center rounded-md`}
+      className={`bg-${
+        selectedDiv === category ? "[#7246FD]" : "white"
+      } w-3/4 p-4 flex flex-col items-center justify-center rounded-md cursor-pointer`}
       onClick={() => handleSelect(category)}
       onDoubleClick={() => handleSelect(category)}
+      onMouseEnter={() => {
+        if (selectedCategory !== category) {
+          document.getElementById("image-" + category).style.background =
+            "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)";
+        }
+      }}
+      onMouseLeave={() => {
+        if (selectedCategory !== category) {
+          document.getElementById("image-" + category).style.background =
+            selectedDiv === category ? "[#7246FD]" : "white";
+        }
+      }}
     >
-      <div
-        className=""
-        onMouseEnter={() => {
-          if (selectedCategory !== category) {
-            document.getElementById("image-" + category).style.background =
-              "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)";
-          }
-        }}
-        onMouseLeave={() => {
-          if (selectedCategory !== category) {
-            document.getElementById("image-" + category).style.background =
-              "white";
-          }
-        }}
-      >
+      <div>
         <img
           style={getCategoryStyle(category)}
           id={`image-${category}`}
@@ -114,6 +116,8 @@ const LightFinder2 = () => {
 
   // Const LightFinder Popup Checkboxes.........................
   const [isopenPopup, setIsopenpopup] = useState(false);
+  // blur background on open of popup ..................
+  const [blurBackground, setBlurBackground] = useState(false);
 
   const [popupContent, setPopupContent] = useState({
     heading: "",
@@ -201,237 +205,362 @@ const LightFinder2 = () => {
       check25,
     });
     setIsopenpopup(true);
+    setBlurBackground(true);
   };
 
   const closePopup = () => {
     setIsopenpopup(false);
+    setBlurBackground(false);
+
+    if (selectedDiv) {
+      document.getElementById("image-" + selectedDiv).style.background =
+        selectedCategory
+          ? "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)"
+          : "white";
+    }
+  };
+
+  const handleConfirm = () => {
+    setIsopenpopup(false);
+    setBlurBackground(false);
+
+    if (selectedDiv) {
+      document.getElementById("image-" + selectedDiv).style.background =
+        "[#7246FD]";
+    }
+  };
+
+  // checkboxes ...........................................
+  const renderCheckboxes = () => {
+    const checkboxes = [];
+    for (let i = 1; i <= 25; i++) {
+      const checkboxKey = `check${i}`;
+      const checkboxContent = popupContent[checkboxKey];
+
+      if (checkboxContent) {
+        checkboxes.push(
+          <div className="flex gap-4" key={checkboxKey}>
+            <input type="checkbox" className="w-4 h-4" id={`checkbox-${i}`} />
+            <p>{checkboxContent}</p>
+          </div>
+        );
+      }
+    }
+    return checkboxes;
+  };
+
+  const handleSelectAll = (event) => {
+    const isChecked = event.target.checked;
+
+    // Select or deselect all checkboxes
+    for (let i = 1; i <= 25; i++) {
+      const checkbox = document.getElementById(`checkbox-${i}`);
+      if (checkbox) {
+        checkbox.checked = isChecked;
+      }
+    }
   };
 
   return (
     <>
-      <div className=" h-full relative">
-        <div>
-          <Navbargrey />
-        </div>
-        <div
-          className="px-28 md:pb-64 bg-[#E4E4E7]"
-          style={{
-            ...lightStyles.LightImg,
-            backgroundImage: `url(${EllipseFinderdecobg})`,
-          }}
-        >
+      <div className={blurBackground ? "blur-background" : ""}>
+        <div className=" h-full relative">
           <div>
-            <p className="pl-8 pt-8 text-lg">Where do you need light ?</p>
+            <Navbargrey />
           </div>
-
-          {/*===== images start here===== */}
-          <div className="text-black text-center grid grid-cols-7 gap-4 px-8  mt-5 ">
-            <div
-              onClick={() =>
-                openPopup(
-                  popupDeatils.Home.heading,
-                  popupDeatils.Home.check1,
-                  popupDeatils.Home.check2,
-                  popupDeatils.Home.check3,
-                  popupDeatils.Home.check4,
-                  popupDeatils.Home.check5,
-                  popupDeatils.Home.check6,
-                  popupDeatils.Home.check7,
-                  popupDeatils.Home.check8,
-                  popupDeatils.Home.check9,
-                  popupDeatils.Home.check10,
-                  popupDeatils.Home.check11,
-                  popupDeatils.Home.check12
-                )
-              }
-            >
-              {renderDiv("Home", Home_default, "Home")}
-            </div>
-            {renderDiv("Office", Office3_default, "Office")}
-            {renderDiv("Hotel", Hotel_default, "Hotel")}
-            {renderDiv("Cafe", Cafe_default, "Cafe")}
-            {renderDiv("Restaurant", Restaurant_default, "Restaurant")}
-            {renderDiv("shop", shop_default, "shop")}
-            <div
-              onClick={() =>
-                openPopup(
-                  popupDeatils.Museum.heading,
-                  popupDeatils.Museum.check1,
-                  popupDeatils.Museum.check2,
-                  popupDeatils.Museum.check3,
-                  popupDeatils.Museum.check4,
-                  popupDeatils.Museum.check5,
-                  popupDeatils.Museum.check6,
-                  popupDeatils.Museum.check7,
-                  popupDeatils.Museum.check8,
-                  popupDeatils.Museum.check9,
-                  popupDeatils.Museum.check10,
-                  popupDeatils.Museum.check11,
-                  popupDeatils.Museum.check12,
-                  popupDeatils.Museum.check13,
-                  popupDeatils.Museum.check14,
-                  popupDeatils.Museum.check15
-                )
-              }
-            >
-              {renderDiv("Museum", Museum_default, "Museum")}
+          <div
+            className="px-28 md:pb-64 bg-[#E4E4E7]"
+            style={{
+              ...lightStyles.LightImg,
+              backgroundImage: `url(${EllipseFinderdecobg})`,
+            }}
+          >
+            <div>
+              <p className="pl-8 pt-8 text-lg">Where do you need light ?</p>
             </div>
 
-            {renderDiv("Factory", Factory_default, "Factory")}
-            {renderDiv("Warehouse", Warehouse_default, "Warehouse")}
-            {renderDiv("Corporate", Corporate_default, "Corporate")}
-            {renderDiv("Concert", Concert_default, "Concert")}
-            {renderDiv("Celebration", Celebration_default, "Celebration")}
-            {renderDiv("Sports", Sports_default, "Sports")}
-            {renderDiv("Hospital", Hospital_default, "Hospital")}
-
-            {renderDiv("Street", Street_default, "Street")}
-            {renderDiv("Park", Park_default, "Park")}
-            {renderDiv("Garden", Garden_default, "Garden")}
-            {renderDiv("Facade", Facade_default, "Facade")}
-            {renderDiv("Yactch", Yacht_default, "Yactch")}
-            {renderDiv("Airplane", Airplane_default, "Airplane")}
-            {renderDiv("Locomotives", Loco_default, "Locomotives")}
-          </div>
-
-          <div className=" px-8 mt-8 flex gap-5 ">
-            <Link to="/lightfinder">
-              <div className="flex gap-6 bg-transparent border-2 border-solid border-[#7246FD] px-6 py-2 hover:bg-[#7246FD] hover:text-white ">
-                <img src={backbtn} alt="" />
-                <button>Back</button>
+            {/*===== images start here===== */}
+            <div className="text-black text-center grid grid-cols-7 gap-4 px-8 mt-5">
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Home.heading,
+                    popupDeatils.Home.check1,
+                    popupDeatils.Home.check2,
+                    popupDeatils.Home.check3,
+                    popupDeatils.Home.check4,
+                    popupDeatils.Home.check5,
+                    popupDeatils.Home.check6,
+                    popupDeatils.Home.check7,
+                    popupDeatils.Home.check8,
+                    popupDeatils.Home.check9,
+                    popupDeatils.Home.check10,
+                    popupDeatils.Home.check11,
+                    popupDeatils.Home.check12
+                  )
+                }
+              >
+                {renderDiv("Home", Home_default, "Home")}
               </div>
-            </Link>
-            <Link to="/lightfinder3">
-              <div className="flex gap-6 bg-[#7246FD] border-2 border-solid border-[#7246FD] px-6 py-2 ">
-                <button className="text-white">Next</button>
-                <img src={nextBtn} alt="" />
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Office.heading,
+                    popupDeatils.Office.check1,
+                    popupDeatils.Office.check2,
+                    popupDeatils.Office.check3,
+                    popupDeatils.Office.check4,
+                    popupDeatils.Office.check5,
+                    popupDeatils.Office.check6,
+                    popupDeatils.Office.check7,
+                    popupDeatils.Office.check8,
+                    popupDeatils.Office.check9,
+                    popupDeatils.Office.check10,
+                    popupDeatils.Office.check11,
+                    popupDeatils.Office.check12,
+                    popupDeatils.Office.check13,
+                    popupDeatils.Office.check14,
+                    popupDeatils.Office.check15,
+                    popupDeatils.Office.check16,
+                    popupDeatils.Office.check17
+                  )
+                }
+              >
+                {renderDiv("Office", Office3_default, "Office")}
               </div>
-            </Link>
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Hotel.heading,
+                    popupDeatils.Hotel.check1,
+                    popupDeatils.Hotel.check2,
+                    popupDeatils.Hotel.check3,
+                    popupDeatils.Hotel.check4,
+                    popupDeatils.Hotel.check5,
+                    popupDeatils.Hotel.check6,
+                    popupDeatils.Hotel.check7,
+                    popupDeatils.Hotel.check8,
+                    popupDeatils.Hotel.check9,
+                    popupDeatils.Hotel.check10,
+                    popupDeatils.Hotel.check11,
+                    popupDeatils.Hotel.check12,
+                    popupDeatils.Hotel.check13,
+                    popupDeatils.Hotel.check14,
+                    popupDeatils.Hotel.check15,
+                    popupDeatils.Hotel.check16,
+                    popupDeatils.Hotel.check17,
+                    popupDeatils.Hotel.check18,
+                    popupDeatils.Hotel.check19,
+                    popupDeatils.Hotel.check20,
+                    popupDeatils.Hotel.check21
+                  )
+                }
+              >
+                {renderDiv("Hotel", Hotel_default, "Hotel")}
+              </div>
+              {renderDiv("Cafe", Cafe_default, "Cafe")}
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Restaurant.heading,
+                    popupDeatils.Restaurant.check1,
+                    popupDeatils.Restaurant.check2,
+                    popupDeatils.Restaurant.check3,
+                    popupDeatils.Restaurant.check4,
+                    popupDeatils.Restaurant.check5,
+                    popupDeatils.Restaurant.check6
+                  )
+                }
+              >
+                {renderDiv("Restaurant", Restaurant_default, "Restaurant")}
+              </div>
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Shop.heading,
+                    popupDeatils.Shop.check1,
+                    popupDeatils.Shop.check2,
+                    popupDeatils.Shop.check3,
+                    popupDeatils.Shop.check4,
+                    popupDeatils.Shop.check5,
+                    popupDeatils.Shop.check6
+                  )
+                }
+              >
+                {renderDiv("Shop", shop_default, "Shop")}
+              </div>
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Museum.heading,
+                    popupDeatils.Museum.check1,
+                    popupDeatils.Museum.check2,
+                    popupDeatils.Museum.check3,
+                    popupDeatils.Museum.check4,
+                    popupDeatils.Museum.check5,
+                    popupDeatils.Museum.check6,
+                    popupDeatils.Museum.check7,
+                    popupDeatils.Museum.check8,
+                    popupDeatils.Museum.check9,
+                    popupDeatils.Museum.check10,
+                    popupDeatils.Museum.check11,
+                    popupDeatils.Museum.check12,
+                    popupDeatils.Museum.check13,
+                    popupDeatils.Museum.check14,
+                    popupDeatils.Museum.check15
+                  )
+                }
+              >
+                {renderDiv("Museum", Museum_default, "Museum")}
+              </div>
+
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Factory.heading,
+                    popupDeatils.Factory.check1,
+                    popupDeatils.Factory.check2,
+                    popupDeatils.Factory.check3,
+                    popupDeatils.Factory.check4,
+                    popupDeatils.Factory.check5,
+                    popupDeatils.Factory.check6,
+                    popupDeatils.Factory.check7,
+                    popupDeatils.Factory.check8,
+                    popupDeatils.Factory.check9,
+                    popupDeatils.Factory.check10,
+                    popupDeatils.Factory.check11,
+                    popupDeatils.Factory.check12,
+                    popupDeatils.Factory.check13,
+                    popupDeatils.Factory.check14,
+                    popupDeatils.Factory.check15,
+                    popupDeatils.Factory.check16,
+                    popupDeatils.Factory.check17,
+                    popupDeatils.Factory.check18
+                  )
+                }
+              >
+                {renderDiv("Factory", Factory_default, "Factory")}
+              </div>
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Warehouse.heading,
+                    popupDeatils.Warehouse.check1,
+                    popupDeatils.Warehouse.check2,
+                    popupDeatils.Warehouse.check3,
+                    popupDeatils.Warehouse.check4,
+                    popupDeatils.Warehouse.check5,
+                    popupDeatils.Warehouse.check6,
+                    popupDeatils.Warehouse.check7,
+                    popupDeatils.Warehouse.check8,
+                    popupDeatils.Warehouse.check9,
+                    popupDeatils.Warehouse.check10,
+                    popupDeatils.Warehouse.check11,
+                    popupDeatils.Warehouse.check12,
+                    popupDeatils.Warehouse.check13,
+                    popupDeatils.Warehouse.check14,
+                    popupDeatils.Warehouse.check15,
+                    popupDeatils.Warehouse.check16
+                  )
+                }
+              >
+                {renderDiv("Warehouse", Warehouse_default, "Warehouse")}
+              </div>
+              {renderDiv("Corporate", Corporate_default, "Corporate")}
+              {renderDiv("Concert", Concert_default, "Concert")}
+              {renderDiv("Celebration", Celebration_default, "Celebration")}
+              {renderDiv("Sports", Sports_default, "Sports")}
+              <div
+                onClick={() =>
+                  openPopup(
+                    popupDeatils.Hospital.heading,
+                    popupDeatils.Hospital.check1,
+                    popupDeatils.Hospital.check2,
+                    popupDeatils.Hospital.check3,
+                    popupDeatils.Hospital.check4,
+                    popupDeatils.Hospital.check5,
+                    popupDeatils.Hospital.check6,
+                    popupDeatils.Hospital.check7,
+                    popupDeatils.Hospital.check8,
+                    popupDeatils.Hospital.check9,
+                    popupDeatils.Hospital.check10,
+                    popupDeatils.Hospital.check11,
+                    popupDeatils.Hospital.check12,
+                    popupDeatils.Hospital.check13,
+                    popupDeatils.Hospital.check14,
+                    popupDeatils.Hospital.check15,
+                    popupDeatils.Hospital.check16,
+                    popupDeatils.Hospital.check17,
+                    popupDeatils.Hospital.check18,
+                    popupDeatils.Hospital.check19,
+                    popupDeatils.Hospital.check20,
+                    popupDeatils.Hospital.check21,
+                    popupDeatils.Hospital.check22,
+                    popupDeatils.Hospital.check23
+                  )
+                }
+              >
+                {renderDiv("Hospital", Hospital_default, "Hospital")}
+              </div>
+
+              {renderDiv("Street", Street_default, "Street")}
+              {renderDiv("Park", Park_default, "Park")}
+              {renderDiv("Garden", Garden_default, "Garden")}
+              {renderDiv("Facade", Facade_default, "Facade")}
+              {renderDiv("Yactch", Yacht_default, "Yactch")}
+              {renderDiv("Airplane", Airplane_default, "Airplane")}
+              {renderDiv("Locomotives", Loco_default, "Locomotives")}
+            </div>
+
+            <div className=" px-8 mt-8 flex gap-5 ">
+              <Link to="/lightfinder">
+                <div className="flex gap-6 bg-transparent border-2 border-solid border-[#7246FD] px-6 py-2 hover:bg-[#7246FD] hover:text-white ">
+                  <img src={backbtn} alt="" />
+                  <button>Back</button>
+                </div>
+              </Link>
+              <Link to="/lightfinder3">
+                <div className="flex gap-6 bg-[#7246FD] border-2 border-solid border-[#7246FD] px-6 py-2 ">
+                  <button className="text-white">Next</button>
+                  <img src={nextBtn} alt="" />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
       {isopenPopup && (
-        <div className="popup bg-white p-5">
+        <div className="popup bg-[#ffffff] p-5">
           <div className="flex flex-row justify-between items-center">
-            <h3>{popupContent.heading}</h3>
-            <button onClick={closePopup}>X</button>
+            <h1 className="text-xl font-semibold">{popupContent.heading}</h1>
+            <button className="text-4xl" onClick={closePopup}>
+              <RxCross2 />
+            </button>
           </div>
-
-          <div className="flex gap-28 pt-5">
+          {/* Crossclick */}
+          <div className="grid grid-cols-2 w-fit gap-10 pt-5 text-xl">
             <p>Choose as applicable</p>
 
-            <div className="flex gap-5">
-              <input type="checkbox" className="w-4 h-4" />
+            <div className="flex items-center gap-5">
+              <input
+                type="checkbox"
+                className="w-5 h-5"
+                onChange={(event) => handleSelectAll(event)}
+              />
               <p>All</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 pt-5 gap-1">
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check1}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check2}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check3}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check4}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check5}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check6}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check7}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check8}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check9}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check10}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check11}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check12}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check13}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check14}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check15}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check16}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check17}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check18}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check19}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check20}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check21}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check22}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check23}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check24}</p>
-            </div>
-            <div className="flex gap-4">
-              <input type="checkbox" className="w-4 h-4" />
-              <p>{popupContent.check25}</p>
-            </div>
+          <div className="grid grid-cols-3 pt-5 gap-1  ">
+            {renderCheckboxes()}
           </div>
 
           <div className="pt-5 flex float-right">
-            <button className="bg-[#7246FD] text-white px-6 py-2">
+            <button
+              onClick={closePopup}
+              className="bg-[#7246FD] text-white px-6 py-2"
+            >
               confirm
             </button>
           </div>

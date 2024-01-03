@@ -48,7 +48,7 @@ const LightFinder9 = () => {
         </div>
       </div>
 
-      <div className="bg-white w-1/2">
+      {/* <div className="bg-white w-1/2">
         <div className="px-14 py-8">
           <div className="flex items-center justify-between">
             <div>
@@ -156,7 +156,7 @@ const LightFinder9 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

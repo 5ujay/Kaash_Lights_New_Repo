@@ -9,3 +9,12 @@
 .bg-purple {
   background-color: #7246fd;
 }
+
+.isSelected {
+  background-color: #7246fd;
+  color: white;
+}
+
+.hovered {
+  background: linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%);
+}

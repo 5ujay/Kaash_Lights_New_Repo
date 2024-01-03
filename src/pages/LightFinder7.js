@@ -87,14 +87,14 @@ const LightFinder7 = () => {
               <div key={index}>
                 <button
                   onClick={() => open(index)}
-                  className="bg-[#7246FD] px-6 sm:px-12 py-1 sm:py-2"
+                  className="bg-[#7246FD] px-10 py-1"
                 >
                   Upload
                 </button>
                 {file && <div className="text-black text-sm">{file.name}</div>}
               </div>
             ))}
-            <button className="px-6 sm:px-12 py-1 sm:py-2">+ Add More</button>
+            <button className="text-[#7246FD] py-1">+ Add More</button>
           </div>
 
           <div className="pt-16">
