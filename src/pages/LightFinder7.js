@@ -52,17 +52,17 @@ const LightFinder7 = () => {
     close(index); // Close the popup on file drop
   };
 
-  const addMore = () => {
-    const newIndex = files.length;
-    setFiles([...files, null]);
-    setOpenpopups([...openpopups, false]);
+  // const addMore = () => {
+  //   const newIndex = files.length;
+  //   setFiles([...files, null]);
+  //   setOpenpopups([...openpopups, false]);
 
-    // Hide the last "Add More" button if the maximum count is reached (2)
-    if (newIndex >= 2) {
-      document.getElementById(`addMoreButton${newIndex}`).style.display =
-        "none";
-    }
-  };
+  //   // Hide the last "Add More" button if the maximum count is reached (2)
+  //   if (newIndex >= 2) {
+  //     document.getElementById(`addMoreButton${newIndex}`).style.display =
+  //       "none";
+  //   }
+  // };
 
   return (
     <>
@@ -87,21 +87,14 @@ const LightFinder7 = () => {
               <div key={index}>
                 <button
                   onClick={() => open(index)}
-                  className="bg-[#7246FD] px-6 sm:px-10 py-1 sm:py-3"
+                  className="bg-[#7246FD] px-6 sm:px-12 py-1 sm:py-2"
                 >
                   Upload
                 </button>
                 {file && <div className="text-black text-sm">{file.name}</div>}
               </div>
             ))}
-            {files.length < 2 && (
-              <button
-                className="text-[#7246FD] text-start px-10 py-3"
-                onClick={addMore}
-              >
-                + Add More
-              </button>
-            )}
+            <button className="px-6 sm:px-12 py-1 sm:py-2">+ Add More</button>
           </div>
 
           <div className="pt-16">
