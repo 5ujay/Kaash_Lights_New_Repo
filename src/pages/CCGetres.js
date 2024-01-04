@@ -1,12 +1,12 @@
-import React from 'react';
-import Ellipse59 from '../images/Calculatorellipsegreenbottom.png';
-import group9676 from '../images/Group9676.svg';
-import Vector7151 from '../images/Vector1751.png';
-import './CCGetres.css';
-import Navbar from '../Components/Navbar';
-import { FaArrowRight } from 'react-icons/fa';
-import { IoMdArrowDown } from 'react-icons/io';
-import { AiOutlineExclamation } from 'react-icons/ai';
+import React from "react";
+import Ellipse59 from "../images/Calculatorellipsegreenbottom.png";
+import group9676 from "../images/Group9676.svg";
+import Vector7151 from "../images/Vector1751.png";
+import "./CCGetres.css";
+import Navbar from "../Components/Navbar";
+import { FaArrowRight } from "react-icons/fa";
+import { IoMdArrowDown } from "react-icons/io";
+import { AiOutlineExclamation } from "react-icons/ai";
 
 export const CCGetres = () => {
   return (
@@ -42,16 +42,16 @@ export const CCGetres = () => {
               <div>
                 <div className="my-5">
                   <h2 className="text-[#03B829] text-2xl font-semibold">
-                    8590{' '}
+                    8590{" "}
                     <span className=" font-normal text-xl text-[#18181B]">
                       Euros
-                    </span>{' '}
+                    </span>{" "}
                   </h2>
                   <p>Approximate cost for light upgradation</p>
                 </div>
                 <div>
                   <h2 className="text-[#03B829] text-2xl font-semibold">
-                    18{' '}
+                    18{" "}
                     <span className=" font-normal text-xl text-[#18181B]">
                       Months
                     </span>
@@ -70,7 +70,7 @@ export const CCGetres = () => {
             </div>
             <div className="flex items-center">
               <button className="bg-[#03B829]  border-2 border-[#03B829] px-5 py-1.5 text-white flex justify-center items-center">
-                Download Report{' '}
+                Download Report{" "}
                 <span className="text-xl">
                   <IoMdArrowDown />
                 </span>

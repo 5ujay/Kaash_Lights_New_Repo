@@ -1,26 +1,18 @@
-import React from 'react';
-import Navbar from '../Components/Navbar';
-import { Routes, Route, useNavigate, Link } from 'react-router-dom';
-import './CCMoreinfo.css';
+import React from "react";
+import Navbar from "../Components/Navbar";
+import { Routes, Route, useNavigate, Link } from "react-router-dom";
+import "./CCMoreinfo.css";
 // import Ellipse_16 from '../images/Ellipse_16.png';
 // import Ellipse_17 from '../images/Ellipse_17.png';
-import lightlogo from '../images/lightlogo.png';
-import lightlogo2 from '../images/lightlogo2.png';
-import Ellipsegreen from '../images/Ellipse-green.png';
-import Calculatorellipseleft from '../images/Calculatorellipseleft.png';
-import CCMoreinfoLamp from './CCMoreinfoLamp';
+import lightlogo from "../images/lightlogo.png";
+import lightlogo2 from "../images/lightlogo2.png";
+import Ellipsegreen from "../images/Ellipse-green.png";
+import Calculatorellipseleft from "../images/Calculatorellipseleft.png";
 
 const CCMoreinfo = () => {
   const navigate = useNavigate();
   return (
     <>
-      {/* <div className="box16">
-          <img className="ellipse16" alt="Ellipse16" src={Ellipse_16} />
-        </div>
-        <div className="box17">
-          <img className="ellipse17" alt="Ellipse17" src={Ellipse_17} />
-        </div>
-      </div>  */}
       <header className="absolute w-full">
         <Navbar />
       </header>
@@ -66,3 +58,13 @@ const CCMoreinfo = () => {
 };
 
 export default CCMoreinfo;
+
+{
+  /* <div className="box16">
+          <img className="ellipse16" alt="Ellipse16" src={Ellipse_16} />
+        </div>
+        <div className="box17">
+          <img className="ellipse17" alt="Ellipse17" src={Ellipse_17} />
+        </div>
+      </div>  */
+}

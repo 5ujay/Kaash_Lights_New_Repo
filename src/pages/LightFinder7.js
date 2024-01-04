@@ -52,8 +52,10 @@ const LightFinder7 = () => {
   };
 
   const handleAddMore = () => {
-    setOpenpopups([...openpopups, false]);
-    setFiles([...files, null]);
+    if (openpopups.length < 10) {
+      setOpenpopups([...openpopups, false]);
+      setFiles([...files, null]);
+    }
   };
 
   return (
