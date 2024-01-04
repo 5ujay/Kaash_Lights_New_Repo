@@ -4,22 +4,20 @@ import LengthDropdown from "../Components/LengthDropdown";
 import AreaDropdown from "../Components/areaDropdown";
 import ellpise_lighfinder_bg1 from "../images/ellpise_lighfinder_bg1.png";
 import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
+// importing background ellipes image
+
+import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder6 = () => {
   return (
     <>
       <section className="bg-[#e4e4e7] h-full w-full">
         <img
-          src={ellpise_lighfinder_bg1}
-          className="absolute right-0 overflow-hidden"
-          alt=""
+          class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
+          src={second_ellipes}
+          alt="ellipes"
         />
-        <img
-          src={ellpise_lighfinder_bg2}
-          className="absolute left-0 overflow-hidden"
-          alt=""
-        />
-        <div className="relative px-10 sm:px-20 lg:px-28 pt-24">
+        <div className="relative z-10 px-10 sm:px-20 lg:px-28 pt-5">
           {/* ====== 6th point ====== */}
           <div>
             <div>
@@ -48,7 +46,7 @@ const LightFinder6 = () => {
               </p>
             </div>
 
-            <div className="pt-10 flex flex-col xl:flex-row text-base lg:text-xl">
+            <div className="pt-5 pb-5 flex flex-col xl:flex-row text-base lg:text-xl">
               <div className="sm:pl-8 grid gap-8 ">
                 <div className="flex flex-row items-center">
                   <span className="w-20 md:w-28">Length</span>

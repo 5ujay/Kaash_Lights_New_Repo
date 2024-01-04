@@ -2,20 +2,18 @@ import React from "react";
 import "../pages/LightFinder8.css";
 import ellpise_lighfinder_bg1 from "../images/ellpise_lighfinder_bg1.png";
 import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
+// importing background ellipes image
+
+import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder5 = () => {
   return (
     <>
-      <div className="bg-[#e4e4e7] h-full w-full px-10 sm:px-20 lg:px-28 pt-20">
+      <div className="bg-[#e4e4e7] h-full w-full px-10 sm:px-20 lg:px-36 pt-10 pb-4">
         <img
-          src={ellpise_lighfinder_bg1}
-          className="absolute overflow-hidden right-0 ms-auto"
-          alt=""
-        />
-        <img
-          src={ellpise_lighfinder_bg2}
-          className="absolute overflow-hidden left-0 ms-auto"
-          alt=""
+          class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
+          src={second_ellipes}
+          alt="ellipes"
         />
         <div className="relative">
           <div>

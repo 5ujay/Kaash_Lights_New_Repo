@@ -3,6 +3,9 @@ import filedrop from "../images/file-drop1.png";
 import { RxCross2 } from "react-icons/rx";
 import ellpise_lighfinder_bg1 from "../images/ellpise_lighfinder_bg1.png";
 import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
+// importing background ellipes image
+
+import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 const LightFinder7 = () => {
   // ========== euro value setup ==========
   const [euro, setEuro] = useState(0);
@@ -60,18 +63,13 @@ const LightFinder7 = () => {
 
   return (
     <>
-      <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-32 py-20">
+      <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-36 py-10 mb-14">
         <img
-          src={ellpise_lighfinder_bg1}
-          className="absolute overflow-hidden right-0 ms-auto"
-          alt=""
+          class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
+          src={second_ellipes}
+          alt="ellipes"
         />
-        <img
-          src={ellpise_lighfinder_bg2}
-          className="absolute overflow-hidden left-0 ms-auto"
-          alt=""
-        />
-        <div className="relative">
+        <div className="relative z-10">
           <p className="text-sm sm:text-base lg:text-xl">
             7. &nbsp; Upload files (if any). Images, Photos, Plan, Drawings, 3D
             Models, Notes etc.
@@ -122,7 +120,7 @@ const LightFinder7 = () => {
           isOpen && (
             <div
               key={index}
-              className="py-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 bg-white p-4 rounded-lg shadow-lg"
+              className="py-4 z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 bg-white p-4 rounded-lg shadow-lg"
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(index, e)}
             >

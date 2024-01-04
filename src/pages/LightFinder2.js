@@ -41,30 +41,65 @@ import nextBtn from "../images/nextbtn.png";
 // importing bg image
 import EllipseFinderdecobg from "../images/EllipseFinderdecobg.png";
 
-const LightFinder2 = () => {
-  const lightStyles = {
-    LightImg: {
-      backgroundImage: "url('../images/EllipseFinderdecobg.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      width: "100%",
-    },
-  };
+// importing background ellipes image
 
+import second_ellipes from "../Light_finder_images/Ellipse_17.png";
+
+const LightFinder2 = () => {
   // selection of div..................................
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedDiv, setSelectedDiv] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleSelect = (category) => {
     // Check if the category is already selected
-    if (selectedCategory === category) {
-      // If yes, remove the selection
+    if (selectedCategory === category && !isPopupOpen) {
+      // If yes, remove the selection and open the popup
       setSelectedCategory(null);
       setSelectedDiv(null);
+      resetFilter(category);
+      openPopupDetails(category);
     } else {
-      // If no, select the category
+      // If no, reset the filter on the previously selected div
+      if (selectedDiv) {
+        resetFilter(selectedDiv);
+      }
+      // Select the new category
       setSelectedCategory(category);
       setSelectedDiv(category);
+      applyFilter(category);
+      openPopupDetails(category);
+    }
+  };
+
+  const openPopupDetails = (category) => {
+    const imageElement = document.getElementById(`image-${category}`);
+    if (imageElement) {
+      imageElement.style.background =
+        "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
+    }
+    setIsPopupOpen(true);
+  };
+
+  const applyFilter = (category) => {
+    if (category) {
+      const imageElement = document.getElementById(`image-${category}`);
+      if (imageElement) {
+        // Apply brightness and invert filter properties
+        imageElement.style.filter = "brightness(0) invert(1)";
+        imageElement.style.background =
+          "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
+      }
+    }
+  };
+
+  const resetFilter = (category) => {
+    if (category) {
+      const imageElement = document.getElementById(`image-${category}`);
+      if (imageElement) {
+        // Reset filter properties
+        imageElement.style.filter = "";
+      }
     }
   };
 
@@ -72,30 +107,20 @@ const LightFinder2 = () => {
     return {
       background:
         selectedCategory === category
-          ? "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)"
-          : "white",
+          ? "linear-gradient(to bottom, transparent 2%, rgba(255, 255, 0, 100) 98%)"
+          : "",
     };
   };
 
   const renderDiv = (category, imageSrc, label) => (
     <div
       className={`bg-${
-        selectedDiv === category ? "[#7246FD]" : "white"
-      } w-3/4 p-4 flex flex-col items-center justify-center rounded-md cursor-pointer`}
+        selectedDiv === category ? "[#7246FD]" : "[#F4F4F5]"
+      } w-3/4 p-4 flex flex-col items-center justify-center rounded-sm cursor-pointer`}
       onClick={() => handleSelect(category)}
       onDoubleClick={() => handleSelect(category)}
-      onMouseEnter={() => {
-        if (selectedCategory !== category) {
-          document.getElementById("image-" + category).style.background =
-            "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)";
-        }
-      }}
-      onMouseLeave={() => {
-        if (selectedCategory !== category) {
-          document.getElementById("image-" + category).style.background =
-            selectedDiv === category ? "[#7246FD]" : "white";
-        }
-      }}
+      onMouseEnter={() => handleHoverEnter(category)}
+      onMouseLeave={() => handleHoverLeave(category)}
     >
       <div>
         <img
@@ -115,6 +140,50 @@ const LightFinder2 = () => {
       </p>
     </div>
   );
+  const handleHoverEnter = (category) => {
+    if (selectedCategory !== category) {
+      const imageElement = document.getElementById(`image-${category}`);
+      if (imageElement) {
+        imageElement.style.background =
+          "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
+      }
+    }
+  };
+  const handleHoverLeave = (category) => {
+    if (selectedCategory !== category) {
+      const imageElement = document.getElementById(`image-${category}`);
+      if (imageElement) {
+        imageElement.style.background =
+          selectedDiv === category ? "[#7246FD]" : "";
+      }
+    }
+  };
+
+  const handleConfirm = () => {
+    setIsopenpopup(false);
+    setBlurBackground(false);
+
+    if (selectedDiv) {
+      // Here you can apply your filter logic based on the selectedDiv and checkbox states
+      const checkboxes = document.querySelectorAll(
+        '.popup input[type="checkbox"]'
+      );
+      const selectedCheckboxes = Array.from(checkboxes).filter(
+        (checkbox) => checkbox.checked
+      );
+
+      // Example: Log the selected div and checked checkboxes
+      console.log("Selected Div:", selectedDiv);
+      console.log("Selected Checkboxes:", selectedCheckboxes);
+
+      // Apply your filter logic based on the selectedDiv and checkboxes
+      // ...
+
+      // Reset the background color
+      document.getElementById("image-" + selectedDiv).style.background =
+        "[#7246FD]";
+    }
+  };
 
   // Const LightFinder Popup Checkboxes.........................
   const [isopenPopup, setIsopenpopup] = useState(false);
@@ -212,25 +281,29 @@ const LightFinder2 = () => {
 
   const closePopup = () => {
     setIsopenpopup(false);
+    setIsPopupOpen(false);
     setBlurBackground(false);
 
     if (selectedDiv) {
-      document.getElementById("image-" + selectedDiv).style.background =
-        selectedCategory
+      // Reset the background color and filter properties
+      const imageElement = document.getElementById(`image-${selectedDiv}`);
+      if (imageElement) {
+        imageElement.style.background = selectedCategory
           ? "linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%)"
           : "white";
+        imageElement.style.filter = "";
+      }
+
+      // Reset the selected div
+      setSelectedDiv(null);
+      setSelectedCategory(null);
     }
   };
 
-  const handleConfirm = () => {
-    setIsopenpopup(false);
-    setBlurBackground(false);
-
-    if (selectedDiv) {
-      document.getElementById("image-" + selectedDiv).style.background =
-        "[#7246FD]";
-    }
-  };
+  // const closePopup = () => {
+  //   setIsPopupOpen(false);
+  //   // ... (rest of the closePopup logic)
+  // };
 
   // checkboxes ...........................................
   const renderCheckboxes = () => {
@@ -266,23 +339,19 @@ const LightFinder2 = () => {
   return (
     <>
       <div className={blurBackground ? "blur-background" : ""}>
-        <div className=" h-full relative">
+        <div className="px-20 lg:px-28 h-full">
+          <img
+            class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
+            src={second_ellipes}
+            alt="ellipes"
+          />
           <div>
-            <Navbargrey />
-          </div>
-          <div
-            className="px-10 md:px-16 lg:px-28 md:pb-64 bg-[#E4E4E7]"
-            style={{
-              ...lightStyles.LightImg,
-              backgroundImage: `url(${EllipseFinderdecobg})`,
-            }}
-          >
-            <div>
+            <div className="relative">
               <p className="sm:pl-8 pt-8 text-lg">Where do you need light ?</p>
             </div>
 
             {/*===== images start here===== */}
-            <div className="text-black text-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-4 sm:px-8 mt-5">
+            <div className="relative z-10 text-black text-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-4 sm:px-8 mt-5 mb-10 ">
               <div
                 onClick={() =>
                   openPopup(
@@ -513,12 +582,12 @@ const LightFinder2 = () => {
               <div>{renderDiv("Park", Park_default, "Park")}</div>
               <div>{renderDiv("Garden", Garden_default, "Garden")}</div>
               <div>{renderDiv("Facade", Facade_default, "Facade")}</div>
-              <div>{renderDiv("Yactch", Yacht_default, "Yactch")}</div>
+              <div>{renderDiv("Yacht", Yacht_default, "Yacht")}</div>
               <div>{renderDiv("Airplane", Airplane_default, "Airplane")}</div>
               <div>{renderDiv("Locomotives", Loco_default, "Locomotives")}</div>
             </div>
 
-            <div className=" px-8 mt-8 flex gap-5 ">
+            {/* <div className=" px-8 mt-8 flex gap-5 ">
               <Link to="/lightfinder">
                 <div className="flex gap-6 bg-transparent border-2 border-solid border-[#7246FD] px-6 py-2 hover:bg-[#7246FD] hover:text-white ">
                   <img src={backbtn} alt="" />
@@ -531,13 +600,13 @@ const LightFinder2 = () => {
                   <img src={nextBtn} alt="" />
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {isopenPopup && (
-        <div className="popup bg-[#ffffff] p-5">
+        <div className="popup bg-[#ffffff] p-5 z-10">
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-xl font-semibold">{popupContent.heading}</h1>
             <button className="text-4xl" onClick={closePopup}>
@@ -564,7 +633,7 @@ const LightFinder2 = () => {
 
           <div className="pt-5 flex float-right">
             <button
-              onClick={closePopup}
+              onClick={handleConfirm}
               className="bg-[#7246FD] text-white px-6 py-2"
             >
               confirm

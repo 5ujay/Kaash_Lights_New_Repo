@@ -1,20 +1,13 @@
-.box:hover .icon {
+.gradient-pseudo-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     to bottom,
-    transparent 4.48%,
-    rgba(252, 255, 103, 0.932) 98.23%
+    transparent 0%,
+    rgba(255, 255, 0, 100) 100%
   );
-}
-
-.bg-purple {
-  background-color: #7246fd;
-}
-
-.isSelected {
-  background-color: #7246fd;
-  color: white;
-}
-
-.hovered {
-  background: linear-gradient(to bottom, transparent 4.48%, rgba(252, 255, 103, 0.932) 98.23%);
+  pointer-events: none; /* Ensure pseudo-element doesn't interfere with mouse events */
 }

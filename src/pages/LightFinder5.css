@@ -1,47 +1,7 @@
-#vic:hover img{
-    content: url('../images/Victorianhover.png');
-}
-
-#clas:hover img{
-    content: url('../images/Classicalhover.png');
-}
-
-#neo:hover img{
-    content: url('../images/Neo\ classicalhover.png');
-}
-
-#brut:hover img{
-    content: url('../images/Brutalisthover.png');
-}
-
-#ecl:hover img{
-    content: url('../images/Eclectichover.png');
-}
-
-#indus:hover img{
-    content: url('../images/Industrialhover.png');
-}
-
-#min:hover img{
-    content: url('../images/Minimalhover.png');
-}
-
-#func:hover img{
-    content: url('../images/Functionalhover.png');
-}
-
-#hyd:hover img{
-    content: url('../images/Hybridhover.png');
-}
-
-#hidd:hover img{
-    content: url('../images/Hiddenhover.png');
-}
-
-#glam:hover img{
-    content: url('../images/Glamourhover.png');
-}
-
-#abs:hover img{
-    content: url('../images/Abstracthover.png');
+.box:hover .icon {
+  background: linear-gradient(
+    to bottom,
+    transparent 4.48%,
+    rgba(252, 255, 103, 0.932) 98.23%
+  );
 }
