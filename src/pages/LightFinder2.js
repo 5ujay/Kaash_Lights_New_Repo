@@ -34,15 +34,32 @@ import Yacht_default from "../images/Yacht.png";
 import Airplane_default from "../images/Airplane.png";
 import Loco_default from "../images/Locomotives.png";
 
-// importing back and next btn arrow image..................
-import backbtn from "../images/backbtn.png";
-import nextBtn from "../images/nextbtn.png";
+// importing the images for selected states ie.White images
+import Home_white from "../images/Home_white.png";
+import Office3_white from "../images/Office3_white.png";
+import Hotel_white from "../images/Hotel_white.png";
+import Cafe_white from "../images/Cafe_white.png";
+import Restaurant_white from "../images/Restaurant_white.png";
+import Shop_white from "../images/Shop_white.png";
+import Exhibition_white from "../images/Exhibition_white.png";
 
-// importing bg image
-import EllipseFinderdecobg from "../images/EllipseFinderdecobg.png";
+import Factory_white from "../images/Factory_white.png";
+import Warehouse2_white from "../images/Warehouse2_white.png";
+import Corporateevent_white from "../images/Corporateevent_white.png";
+import Concerts_white from "../images/Concerts_white.png";
+import Celebration_white from "../images/Celebration_white.png";
+import Sports_white from "../images/Sports_white.png";
+import Hospital_white from "../images/Hospital_white.png";
+
+import Street_white from "../images/Street_white.png";
+import Park_white from "../images/Park_white.png";
+import Garden_white from "../images/Garden_white.png";
+import Facade_white from "../images/Facade_white.png";
+import Yacht_white from "../images/Yacht_white.png";
+import Airplane_white from "../images/Airplane_white.png";
+import Locomotives_white from "../images/Locomotives_white.png";
 
 // importing background ellipes image
-
 import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder2 = () => {
@@ -84,9 +101,11 @@ const LightFinder2 = () => {
   const applyFilter = (category) => {
     if (category) {
       const imageElement = document.getElementById(`image-${category}`);
+      const divElement = document.getElementById(`div-${category}`);
       if (imageElement) {
         // Apply brightness and invert filter properties
-        imageElement.style.filter = "brightness(0) invert(1)";
+        // imageElement.style.filter = "brightness(0) invert(1)";
+        imageElement.style.filter = "brightness(full)";
         imageElement.style.background =
           "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
       }
@@ -112,7 +131,7 @@ const LightFinder2 = () => {
     };
   };
 
-  const renderDiv = (category, imageSrc, label) => (
+  const renderDiv = (category, imageSrc, label, selectedImageSrc) => (
     <div
       className={`bg-${
         selectedDiv === category ? "[#7246FD]" : "[#F4F4F5]"
@@ -127,10 +146,11 @@ const LightFinder2 = () => {
           style={getCategoryStyle(category)}
           id={`image-${category}`}
           className="w-16"
-          src={imageSrc}
+          src={selectedDiv === category ? selectedImageSrc : imageSrc}
           alt=""
         />
       </div>
+
       <p
         className={`pt-2 text-sm sm:text-base ${
           selectedCategory === category ? "text-white" : ""
@@ -140,6 +160,7 @@ const LightFinder2 = () => {
       </p>
     </div>
   );
+
   const handleHoverEnter = (category) => {
     if (selectedCategory !== category) {
       const imageElement = document.getElementById(`image-${category}`);
@@ -347,7 +368,9 @@ const LightFinder2 = () => {
           />
           <div>
             <div className="relative">
-              <p className="sm:pl-8 pt-8 text-lg">Where do you need light ?</p>
+              <p className="sm:pl-8 pt-8 text-lg">
+                1. Where do you need light ?
+              </p>
             </div>
 
             {/*===== images start here===== */}
@@ -371,7 +394,7 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Home", Home_default, "Home")}
+                {renderDiv("Home", Home_default, "Home", Home_white)}
               </div>
               <div
                 onClick={() =>
@@ -397,7 +420,7 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Office", Office3_default, "Office")}
+                {renderDiv("Office", Office3_default, "Office", Office3_white)}
               </div>
               <div
                 onClick={() =>
@@ -427,9 +450,9 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Hotel", Hotel_default, "Hotel")}
+                {renderDiv("Hotel", Hotel_default, "Hotel", Hotel_white)}
               </div>
-              <div>{renderDiv("Cafe", Cafe_default, "Cafe")}</div>
+              <div>{renderDiv("Cafe", Cafe_default, "Cafe", Cafe_white)}</div>
               <div
                 onClick={() =>
                   openPopup(
@@ -443,7 +466,12 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Restaurant", Restaurant_default, "Restaurant")}
+                {renderDiv(
+                  "Restaurant",
+                  Restaurant_default,
+                  "Restaurant",
+                  Restaurant_white
+                )}
               </div>
               <div
                 onClick={() =>
@@ -458,7 +486,7 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Shop", shop_default, "Shop")}
+                {renderDiv("Shop", shop_default, "Shop", Shop_white)}
               </div>
               <div
                 onClick={() =>
@@ -482,7 +510,12 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Museum", Museum_default, "Museum")}
+                {renderDiv(
+                  "Museum",
+                  Museum_default,
+                  "Museum",
+                  Exhibition_white
+                )}
               </div>
               <div
                 onClick={() =>
@@ -509,7 +542,12 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Factory", Factory_default, "Factory")}
+                {renderDiv(
+                  "Factory",
+                  Factory_default,
+                  "Factory",
+                  Factory_white
+                )}
               </div>
 
               <div
@@ -535,16 +573,40 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Warehouse", Warehouse_default, "Warehouse")}
+                {renderDiv(
+                  "Warehouse",
+                  Warehouse_default,
+                  "Warehouse",
+                  Warehouse2_white
+                )}
               </div>
               <div>
-                {renderDiv("Corporate", Corporate_default, "Corporate")}
+                {renderDiv(
+                  "Corporate",
+                  Corporate_default,
+                  "Corporate",
+                  Corporateevent_white
+                )}
               </div>
-              <div>{renderDiv("Concert", Concert_default, "Concert")}</div>
               <div>
-                {renderDiv("Celebration", Celebration_default, "Celebration")}
+                {renderDiv(
+                  "Concert",
+                  Concert_default,
+                  "Concert",
+                  Concerts_white
+                )}
               </div>
-              <div>{renderDiv("Sports", Sports_default, "Sports")}</div>
+              <div>
+                {renderDiv(
+                  "Celebration",
+                  Celebration_default,
+                  "Celebration",
+                  Celebration_white
+                )}
+              </div>
+              <div>
+                {renderDiv("Sports", Sports_default, "Sports", Sports_white)}
+              </div>
               <div
                 onClick={() =>
                   openPopup(
@@ -575,16 +637,43 @@ const LightFinder2 = () => {
                   )
                 }
               >
-                {renderDiv("Hospital", Hospital_default, "Hospital")}
+                {renderDiv(
+                  "Hospital",
+                  Hospital_default,
+                  "Hospital",
+                  Hospital_white
+                )}
               </div>
 
-              <div>{renderDiv("Street", Street_default, "Street")}</div>
-              <div>{renderDiv("Park", Park_default, "Park")}</div>
-              <div>{renderDiv("Garden", Garden_default, "Garden")}</div>
-              <div>{renderDiv("Facade", Facade_default, "Facade")}</div>
-              <div>{renderDiv("Yacht", Yacht_default, "Yacht")}</div>
-              <div>{renderDiv("Airplane", Airplane_default, "Airplane")}</div>
-              <div>{renderDiv("Locomotives", Loco_default, "Locomotives")}</div>
+              <div>
+                {renderDiv("Street", Street_default, "Street", Street_white)}
+              </div>
+              <div>{renderDiv("Park", Park_default, "Park", Park_white)}</div>
+              <div>
+                {renderDiv("Garden", Garden_default, "Garden", Garden_white)}
+              </div>
+              <div>
+                {renderDiv("Facade", Facade_default, "Facade", Facade_white)}
+              </div>
+              <div>
+                {renderDiv("Yacht", Yacht_default, "Yacht", Yacht_white)}
+              </div>
+              <div>
+                {renderDiv(
+                  "Airplane",
+                  Airplane_default,
+                  "Airplane",
+                  Airplane_white
+                )}
+              </div>
+              <div>
+                {renderDiv(
+                  "Locomotives",
+                  Loco_default,
+                  "Locomotives",
+                  Locomotives_white
+                )}
+              </div>
             </div>
 
             {/* <div className=" px-8 mt-8 flex gap-5 ">

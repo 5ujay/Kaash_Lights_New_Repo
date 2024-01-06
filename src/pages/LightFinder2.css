@@ -1,4 +1,4 @@
-.gradient-pseudo-element {
+/* .gradient-pseudo-element {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,5 +9,7 @@
     transparent 0%,
     rgba(255, 255, 0, 100) 100%
   );
-  pointer-events: none; /* Ensure pseudo-element doesn't interfere with mouse events */
-}
+  pointer-events: none; 
+  filter: brightness(0) invert(1);
+
+} */

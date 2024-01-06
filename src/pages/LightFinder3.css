@@ -1,11 +1,11 @@
 .box:hover .icon {
   background: linear-gradient(
     to bottom,
-    transparent 4.48%,
-    rgba(252, 255, 103, 0.932) 98.23%
+    transparent 0%,
+    rgba(255, 255, 0) 100%
   );
 }
-
+/* 
 .gradient {
   background-image: radial-gradient(
     28.95% 28.95% at 50% 50%,
@@ -13,5 +13,4 @@
     #9d81f7 57.6%,
     rgba(217, 217, 217, 0) 100%
   );
-  /* filter: blur(30px); */
-}
+} */

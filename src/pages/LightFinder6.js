@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./LightFinder6.css";
 import LengthDropdown from "../Components/LengthDropdown";
 import AreaDropdown from "../Components/areaDropdown";
@@ -9,6 +9,12 @@ import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
 import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder6 = () => {
+  const [selected, setSelected] = useState(null);
+
+  const handleClick = (index) => {
+    setSelected(index);
+    // You can perform additional actions here if needed
+  };
   return (
     <>
       <section className="bg-[#e4e4e7] h-full w-full">
@@ -26,13 +32,34 @@ const LightFinder6 = () => {
               </p>
             </div>
             <div className="flex flex-row gap-2 md:gap-20 text-base md:text-lg pt-8 pl-8">
-              <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <div
+                className={`${
+                  selected === 0
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                } w-36 h-14 flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClick(0)}
+              >
                 <p>Interior</p>
               </div>
-              <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <div
+                className={`${
+                  selected === 1
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                } w-36 h-14 flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClick(1)}
+              >
                 <p>Exterior</p>
               </div>
-              <div className="bg-white w-48 h-20 flex items-center justify-center rounded-sm hover:bg-[#7246fd] hover:text-white">
+              <div
+                className={`${
+                  selected === 2
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                } w-36 h-14 flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClick(2)}
+              >
                 <p>Mix-use</p>
               </div>
             </div>
@@ -46,13 +73,13 @@ const LightFinder6 = () => {
               </p>
             </div>
 
-            <div className="pt-5 pb-5 flex flex-col xl:flex-row text-base lg:text-xl">
-              <div className="sm:pl-8 grid gap-8 ">
+            <div className="pb-5 flex flex-col xl:flex-row text-base lg:text-lg">
+              <div className="pt-5 xl:pt-0 sm:pl-8 grid gap-5 xl:gap-0">
                 <div className="flex flex-row items-center">
                   <span className="w-20 md:w-28">Length</span>
                   <div className="flex justify-center items-center gap-6 xl:gap-10">
                     <input
-                      className="py-3 md:w-48 px-2 w-32"
+                      className="py-2 md:w-36 px-2 w-32 border border-gray-400 outline-none"
                       type="number"
                       min="0"
                     ></input>
@@ -64,7 +91,7 @@ const LightFinder6 = () => {
                   <span className="w-20 md:w-28">Breadth</span>
                   <div className="flex justify-center items-center gap-6 xl:gap-10">
                     <input
-                      className="py-3 md:w-48 px-2 w-32"
+                      className="py-2 md:w-36 px-2 w-32 border border-gray-400 outline-none"
                       type="number"
                       min="0"
                     ></input>
@@ -76,7 +103,7 @@ const LightFinder6 = () => {
                   <span className="w-20 md:w-28">Height</span>
                   <div className="flex justify-center items-center gap-6 xl:gap-10">
                     <input
-                      className="py-3 md:w-48 px-2 w-32"
+                      className="py-2 md:w-36 px-2 w-32 border border-gray-400 outline-none"
                       type="number"
                       min="0"
                     ></input>
@@ -88,7 +115,7 @@ const LightFinder6 = () => {
                   <span className="w-20 md:w-28">Area</span>
                   <div className="flex justify-center items-center gap-6 xl:gap-10">
                     <input
-                      className="py-3 md:w-48 px-2 w-32"
+                      className="py-2 md:w-36 px-2 w-32 border border-gray-400 outline-none"
                       type="number"
                       min="0"
                     ></input>
@@ -105,12 +132,12 @@ const LightFinder6 = () => {
                 </ul>
               </div>
 
-              <div className="hidden sm:block sm:pl-8 pt-8 xl:pt-0  ">
+              <div className="hidden sm:block sm:pl-8 pt-5">
                 <div className="flex items-center">
                   <span className="w-20 md:w-28">Area</span>
                   <div className="flex justify-center items-center gap-6 xl:gap-10">
                     <input
-                      className="py-3 md:w-48 px-2 w-32"
+                      className="py-2 md:w-36 px-2 w-32 border border-gray-400 outline-none"
                       type="number"
                       min="0"
                     ></input>

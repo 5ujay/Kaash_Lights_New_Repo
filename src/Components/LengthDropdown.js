@@ -15,7 +15,7 @@ const LengthDropdown = () => {
         id="length-dropdown"
         value={selectedUnit}
         onChange={handleUnitChange}
-        className="outline-none  py-3 px-1 rounded-lg"
+        className="outline-none py-2.5 px-1"
       >
         {lengthUnits.map((unit) => (
           <option key={unit} value={unit}>

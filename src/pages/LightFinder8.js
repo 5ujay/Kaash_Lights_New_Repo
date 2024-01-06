@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../pages/LightFinder8.css";
 import ellpise_lighfinder_bg1 from "../images/ellpise_lighfinder_bg1.png";
 import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
@@ -7,6 +7,11 @@ import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
 import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder5 = () => {
+  const [selected, setSelected] = useState(null);
+
+  const handleClick = (index) => {
+    setSelected(index);
+  };
   return (
     <>
       <div className="bg-[#e4e4e7] h-full w-full px-10 sm:px-20 lg:px-36 pt-10 pb-4">
@@ -22,14 +27,28 @@ const LightFinder5 = () => {
                 9. &nbsp; How do you wish to be contacted.
               </p>
             </div>
-            <div className="grid grid-cols-2 h-32 gap-2 text-base mt-6 sm:h-20 sm:grid-cols-3 sm:w-full sm:gap-6 md:w-3/4 lg:gap-10 lg:text-lg xl:w-1/2 ">
-              <div className="bg-white flex items-center justify-center rounded-md hover:bg-[#7246fd] hover:text-white">
+            <div className="grid grid-cols-2 h-32 gap-2 text-base mt-6 sm:h-16 sm:grid-cols-3 sm:w-full sm:gap-6 md:w-3/4 lg:gap-10  lg:text-lg xl:w-1/2 ">
+              <div
+                classNam-={`${
+                  selected === 0
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                }bg-white flex items-center justify-center rounded-sm`}
+                onClick={() => handleClick(0)}
+              >
                 <p>Via e-mail</p>
               </div>
-              <div className="bg-white flex items-center justify-center rounded-md hover:bg-[#7246fd] hover:text-white">
+              <div
+                classNam-={`${
+                  selected === 1
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                }bg-white flex items-center justify-center rounded-sm`}
+                onClick={() => handleClick(1)}
+              >
                 <p>Schedule a call</p>
               </div>
-              <div className="bg-white flex items-center justify-center rounded-md hover:bg-[#7246fd] hover:text-white">
+              <div className="bg-white  flex items-center justify-center rounded-md hover:bg-[#7246fd] hover:text-white">
                 <p>Fix a meeting</p>
               </div>
             </div>
