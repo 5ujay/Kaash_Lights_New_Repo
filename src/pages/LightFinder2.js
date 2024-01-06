@@ -105,7 +105,7 @@ const LightFinder2 = () => {
       if (imageElement) {
         // Apply brightness and invert filter properties
         // imageElement.style.filter = "brightness(0) invert(1)";
-        imageElement.style.filter = "brightness(full)";
+        // imageElement.style.filter = "brightness(full)";
         imageElement.style.background =
           "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
       }
@@ -132,32 +132,34 @@ const LightFinder2 = () => {
   };
 
   const renderDiv = (category, imageSrc, label, selectedImageSrc) => (
-    <div
-      className={`bg-${
-        selectedDiv === category ? "[#7246FD]" : "[#F4F4F5]"
-      } w-3/4 p-4 flex flex-col items-center justify-center rounded-sm cursor-pointer`}
-      onClick={() => handleSelect(category)}
-      onDoubleClick={() => handleSelect(category)}
-      onMouseEnter={() => handleHoverEnter(category)}
-      onMouseLeave={() => handleHoverLeave(category)}
-    >
-      <div>
-        <img
-          style={getCategoryStyle(category)}
-          id={`image-${category}`}
-          className="w-16"
-          src={selectedDiv === category ? selectedImageSrc : imageSrc}
-          alt=""
-        />
-      </div>
-
-      <p
-        className={`pt-2 text-sm sm:text-base ${
-          selectedCategory === category ? "text-white" : ""
-        }`}
+    <div className="pushable">
+      <div
+        className={`bg-${
+          selectedDiv === category ? "[#7246FD]" : "[#F4F4F5]"
+        } w-3/4 p-4 flex flex-col items-center justify-center rounded-sm cursor-pointer shadow`}
+        onClick={() => handleSelect(category)}
+        onDoubleClick={() => handleSelect(category)}
+        onMouseEnter={() => handleHoverEnter(category)}
+        onMouseLeave={() => handleHoverLeave(category)}
       >
-        {label}
-      </p>
+        <div>
+          <img
+            style={getCategoryStyle(category)}
+            id={`image-${category}`}
+            className="w-16"
+            src={selectedDiv === category ? selectedImageSrc : imageSrc}
+            alt=""
+          />
+        </div>
+
+        <p
+          className={`pt-2 text-sm sm:text-base ${
+            selectedCategory === category ? "text-white" : ""
+          }`}
+        >
+          {label}
+        </p>
+      </div>
     </div>
   );
 
@@ -360,7 +362,7 @@ const LightFinder2 = () => {
   return (
     <>
       <div className={blurBackground ? "blur-background" : ""}>
-        <div className="px-20 lg:px-28 h-full">
+        <div className="px-14 sm:px-20 lg:px-28 h-full">
           <img
             class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
             src={second_ellipes}

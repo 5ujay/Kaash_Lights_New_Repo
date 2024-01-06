@@ -128,13 +128,23 @@ const LightFinder4 = () => {
     Array(Data.length).fill(false)
   );
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   const handleClick = (index) => {
     const newSelectedImages = [...selectedImages];
     newSelectedImages[index] = !newSelectedImages[index];
     setSelectedImages(newSelectedImages);
   };
   return (
-    <div className="px-20 lg:px-28 h-full w-full select-none">
+    <div className="px-20 lg:px-28 h-full select-none">
       {/* Ellipse */}
       <img
         className="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
@@ -155,6 +165,8 @@ const LightFinder4 = () => {
               selectedImages[index] ? "[#7246FD]" : "[#F4F4F5]"
             } py-6 box rounded-sm cursor-pointer`}
             onClick={() => handleClick(index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="mx-5 flex flex-col items-center justify-center">
               <img
@@ -165,6 +177,12 @@ const LightFinder4 = () => {
                     : image.defaultImage
                 }
                 alt={image.name}
+                style={{
+                  background:
+                    hoveredIndex === index || selectedImages[index]
+                      ? "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0) 100%)"
+                      : "none",
+                }}
               />
               <p
                 className={`pt-2 ${selectedImages[index] ? "text-white" : ""}`}

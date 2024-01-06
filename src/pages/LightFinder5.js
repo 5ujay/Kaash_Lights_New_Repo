@@ -109,18 +109,34 @@ const Data = [
 ];
 
 const LightFinder5 = () => {
-  const [selectedImages, setSelectedImages] = useState(
-    Array(Data.length).fill(false)
-  );
+  // const [selectedImages, setSelectedImages] = useState(
+  //   Array(Data.length).fill(false)
+  // );
 
-  const handleClick = (index) => {
-    const newSelectedImages = [...selectedImages];
-    newSelectedImages[index] = !newSelectedImages[index];
-    setSelectedImages(newSelectedImages);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
   };
 
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
+  const handleClick = (index) => {
+    // Toggle the selection state
+    setSelectedImageIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  // const handleClick = (index) => {
+  //   const newSelectedImages = [...selectedImages];
+  //   newSelectedImages[index] = !newSelectedImages[index];
+  //   setSelectedImages(newSelectedImages);
+  // };
+
   return (
-    <div className="px-20 lg:px-28 h-full w-full select-none">
+    <div className="px-20 lg:px-28 h-full select-none">
       {/* Ellipse */}
       <img
         className="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
@@ -128,9 +144,7 @@ const LightFinder5 = () => {
         alt="ellipes"
       />
       <div>
-        <p className="sm:pl-8 pt-8 text-lg">
-          3. Choose light position (select multiple if applicable).
-        </p>
+        <p className="sm:pl-8 pt-8 text-lg">4. Choose a design style.</p>
       </div>
 
       <div className="relative z-10 text-black text-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 gap-x-8 sm:px-8 mt-5 mb-10 max-w-5xl  ">
@@ -138,22 +152,32 @@ const LightFinder5 = () => {
           <div
             key={index}
             className={`bg-${
-              selectedImages[index] ? "[#7246FD]" : "[#F4F4F5]"
+              selectedImageIndex === index ? "[#7246FD]" : "[#F4F4F5]"
             } py-6 box rounded-sm cursor-pointer`}
             onClick={() => handleClick(index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="mx-5 flex flex-col items-center justify-center">
               <img
                 className="w-16 icon"
                 src={
-                  selectedImages[index]
+                  selectedImageIndex === index
                     ? image.selectedImage
                     : image.defaultImage
                 }
                 alt={image.name}
+                style={{
+                  background:
+                    hoveredIndex === index || selectedImageIndex === index
+                      ? "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0) 100%)"
+                      : "none",
+                }}
               />
               <p
-                className={`pt-2 ${selectedImages[index] ? "text-white" : ""}`}
+                className={`pt-2 ${
+                  selectedImageIndex === index ? "text-white" : ""
+                }`}
               >
                 {image.name}
               </p>

@@ -110,64 +110,20 @@ const Data = [
   },
 ];
 
-// const handleClick = (index) => {
-//   const targetElement = document.getElementById(index);
-
-//   if (targetElement) {
-//     const imgElement = targetElement.querySelector("img");
-
-//     if (imgElement) {
-//       const computedStyle = window.getComputedStyle(imgElement);
-//       const backgroundColor = computedStyle.background;
-
-//       if (
-//         backgroundColor ===
-//         "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)"
-//       ) {
-//         // If already selected, reset to default state
-//         targetElement.style.backgroundColor = "#F4F4F5";
-//         imgElement.style.background = "none"; // Reset image background
-//       } else {
-//         // If not selected, apply the purple background and gradient effect
-//         targetElement.style.backgroundColor = "#7246FD";
-//         imgElement.style.background =
-//           "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0, 100) 100%)";
-//       }
-//     }
-//   }
-// };
-
-// const handleDoubleClick = (index) => {
-//   const targetElement = document.getElementById(index);
-
-//   if (targetElement) {
-//     const imgElement = targetElement.querySelector("img");
-
-//     if (imgElement) {
-//       // Reset to default state on double-click
-//       targetElement.style.backgroundColor = "#F4F4F5";
-//       imgElement.style.background = "none";
-//     }
-//   }
-// };
-
-// const handleClick = (index) => {
-//   const targetElement = document.getElementById(index);
-//   let computedStyle = window.getComputedStyle(targetElement);
-//   if (computedStyle) {
-//     var backgroundColor = computedStyle.backgroundColor;
-//     if (backgroundColor === "rgb(244, 244, 245)") {
-//       targetElement.style.backgroundColor = "#7246FD";
-//     } else {
-//       targetElement.style.backgroundColor = "#F4F4F5";
-//     }
-//   }
-// };
-
 const LightFinder3 = () => {
   const [selectedImages, setSelectedImages] = useState(
     Array(Data.length).fill(false)
   );
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
 
   const handleClick = (index) => {
     const newSelectedImages = [...selectedImages];
@@ -176,7 +132,7 @@ const LightFinder3 = () => {
   };
 
   return (
-    <div className="px-20 lg:px-28 h-full w-full select-none">
+    <div className="px-20 lg:px-28 h-full select-none">
       {/* Ellipse */}
       <img
         className="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
@@ -197,16 +153,25 @@ const LightFinder3 = () => {
               selectedImages[index] ? "[#7246FD]" : "[#F4F4F5]"
             } py-6 box rounded-sm cursor-pointer`}
             onClick={() => handleClick(index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="mx-5 flex flex-col items-center justify-center">
               <img
                 className="w-16 icon"
+                id="img"
                 src={
                   selectedImages[index]
                     ? image.selectedImage
                     : image.defaultImage
                 }
                 alt={image.name}
+                style={{
+                  background:
+                    hoveredIndex === index || selectedImages[index]
+                      ? "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 0) 100%)"
+                      : "none",
+                }}
               />
               <p
                 className={`pt-2 ${selectedImages[index] ? "text-white" : ""}`}

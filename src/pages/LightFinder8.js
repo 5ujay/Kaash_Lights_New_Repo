@@ -14,7 +14,7 @@ const LightFinder5 = () => {
   };
   return (
     <>
-      <div className="bg-[#e4e4e7] h-full w-full px-10 sm:px-20 lg:px-36 pt-10 pb-4">
+      <div className="bg-[#e4e4e7] h-full px-10 sm:px-20 lg:px-36 pt-10 pb-4">
         <img
           class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
           src={second_ellipes}
@@ -23,7 +23,7 @@ const LightFinder5 = () => {
         <div className="relative z-10">
           <div>
             <div>
-              <p className="text-base sm:text-lg md:text-xl">
+              <p className="text-base sm:text-lg md:text-lg">
                 9. &nbsp; How do you wish to be contacted.
               </p>
             </div>
@@ -62,7 +62,7 @@ const LightFinder5 = () => {
           </div>
 
           <div className="pt-14">
-            <p className="text-base sm:text-lg md:text-xl">
+            <p className="text-base sm:text-lg md:text-lg">
               10. &nbsp; Write below if you would like to add any comments. (Max
               1000Words)
             </p>
@@ -75,7 +75,7 @@ const LightFinder5 = () => {
           </div>
 
           <div className="pt-10">
-            <p className="text-base sm:text-lg md:text-xl">
+            <p className="text-base sm:text-lg md:text-lg">
               11. &nbsp; Enter your email
             </p>
             <div className="py-5">

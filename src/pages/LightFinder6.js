@@ -17,17 +17,17 @@ const LightFinder6 = () => {
   };
   return (
     <>
-      <section className="bg-[#e4e4e7] h-full w-full">
+      <section className="bg-[#e4e4e7] h-full">
         <img
           class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
           src={second_ellipes}
           alt="ellipes"
         />
-        <div className="relative z-10 px-10 sm:px-20 lg:px-28 pt-5">
+        <div className="relative z-10 px-10 sm:px-20 lg:px-36 pt-5">
           {/* ====== 6th point ====== */}
           <div>
             <div>
-              <p className="text-lg md:text-xl">
+              <p className="text-lg  pt-8">
                 5. &nbsp; Choose the application area.
               </p>
             </div>
@@ -68,7 +68,7 @@ const LightFinder6 = () => {
           {/* ======7th point ====== */}
           <div className="pt-16">
             <div>
-              <p className="text-lg md:text-xl">
+              <p className="text-lg">
                 6. &nbsp; Enter space dimensions or area.
               </p>
             </div>

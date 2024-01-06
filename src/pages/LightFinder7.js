@@ -63,14 +63,14 @@ const LightFinder7 = () => {
 
   return (
     <>
-      <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-36 py-10 mb-14">
+      <div className="bg-[#e4e4e7] px-10 sm:px-20  md:px-24 lg:px-36 py-10 mb-14 h-full">
         <img
           class="absolute right-0 w-96 md:w-1/2  ms-auto overflow-hidden top-1/2 left-1/2 translate-x-[0%] translate-y-[-50%] select-none"
           src={second_ellipes}
           alt="ellipes"
         />
         <div className="relative z-10">
-          <p className="text-sm sm:text-base lg:text-xl">
+          <p className="text-sm sm:text-base lg:text-lg">
             7. &nbsp; Upload files (if any). Images, Photos, Plan, Drawings, 3D
             Models, Notes etc.
           </p>
@@ -92,7 +92,7 @@ const LightFinder7 = () => {
           </div>
 
           <div className="pt-16">
-            <p className="text-sm sm:text-base lg:text-xl">
+            <p className="text-sm sm:text-base lg:text-lg">
               8. &nbsp; Do you have a budget in mind, if not our team will help
               you identify one.
             </p>

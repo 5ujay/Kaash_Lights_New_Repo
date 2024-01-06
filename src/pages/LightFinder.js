@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import Navbargrey from "../Components/Navbargrey";
 import LightFinder1 from "./LightFinder1";
 import LightFinder2 from "./LightFinder2";
@@ -10,7 +9,6 @@ import LightFinder6 from "./LightFinder6";
 import LightFinder7 from "./LightFinder7";
 import LightFinder8 from "./LightFinder8";
 import LightFinder9 from "./LightFinder9";
-
 import first_ellipes from "../Light_finder_images/Ellipse 16.png";
 
 const LightFinder = () => {
@@ -25,7 +23,7 @@ const LightFinder = () => {
 
   const coloredNavigation = [];
   for (let i = 1; i < count; i++) {
-    if (count == 7 && i == count - 1) {
+    if (count === 7 && i === count - 1) {
       coloredNavigation.push(
         <div className="bg-[#7246FD] h-3.5 w-20 rounded-r-lg"></div>
       );
@@ -40,7 +38,7 @@ const LightFinder = () => {
   }
 
   return (
-    <div className="h-full relative min-h-screen bg-[#E4E4E7]">
+    <div className="h-full overflow-hidden relative min-h-screen bg-[#E4E4E7]">
       <div>
         <Navbargrey />
       </div>
@@ -58,11 +56,11 @@ const LightFinder = () => {
         {count > 0 && count < 8 && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 md:gap-x-11 xl:gap-x-14 gap-y-4 pl-4 lg:pl-8 w-3/4 items-center pb-28">
             <img
-              class="absolute  w-96 md:w-1/4 left-0 top-1/3 ms-auto translate-x-[0%] translate-y-[-100%] select-none"
+              className="absolute w-96 md:w-1/4 left-0 top-1/3 ms-auto translate-x-[0%] translate-y-[-100%] select-none"
               src={first_ellipes}
               alt="ellipes"
             ></img>
-            <div className=" flex gap-5 cursor-pointer relative z-10">
+            <div className="flex gap-5 cursor-pointer relative z-10">
               <div
                 className="flex gap-6 bg-transparent border-2 border-solid border-[#7246FD] px-5 py-.5 hover:bg-[#7246FD] hover:text-white  text-[#7246FD] bg-[#D4D4D8]"
                 onClick={decreaseCount}
@@ -100,8 +98,8 @@ const LightFinder = () => {
             </div>
           </div>
         )}
-        {count == 0 && (
-          <div className="pb-40 lg:px-12 select-none" onClick={increaseCount}>
+        {count === 0 && (
+          <div className="lg:px-12 select-none" onClick={increaseCount}>
             <button className="bg-[#7246FD] lg:-ml-7 px-14 py-2 text-white text-xl">
               Start
             </button>
