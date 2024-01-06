@@ -7,10 +7,10 @@ import ellpise_lighfinder_bg2 from "../images/ellpise_lighfinder_bg2.png";
 import second_ellipes from "../Light_finder_images/Ellipse_17.png";
 
 const LightFinder5 = () => {
-  const [selected, setSelected] = useState(null);
+  const [selectContact, setSelectContact] = useState(null);
 
-  const handleClick = (index) => {
-    setSelected(index);
+  const handleClickContact = (index) => {
+    setSelectContact(index);
   };
   return (
     <>
@@ -20,7 +20,7 @@ const LightFinder5 = () => {
           src={second_ellipes}
           alt="ellipes"
         />
-        <div className="relative">
+        <div className="relative z-10">
           <div>
             <div>
               <p className="text-base sm:text-lg md:text-xl">
@@ -29,26 +29,33 @@ const LightFinder5 = () => {
             </div>
             <div className="grid grid-cols-2 h-32 gap-2 text-base mt-6 sm:h-16 sm:grid-cols-3 sm:w-full sm:gap-6 md:w-3/4 lg:gap-10  lg:text-lg xl:w-1/2 ">
               <div
-                classNam-={`${
-                  selected === 0
+                className={`${
+                  selectContact === 0
                     ? "bg-[#7246fd] text-white"
                     : "bg-white text-black"
-                }bg-white flex items-center justify-center rounded-sm`}
-                onClick={() => handleClick(0)}
+                } flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClickContact(0)}
               >
                 <p>Via e-mail</p>
               </div>
               <div
-                classNam-={`${
-                  selected === 1
+                className={`${
+                  selectContact === 1
                     ? "bg-[#7246fd] text-white"
                     : "bg-white text-black"
-                }bg-white flex items-center justify-center rounded-sm`}
-                onClick={() => handleClick(1)}
+                } flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClickContact(1)}
               >
                 <p>Schedule a call</p>
               </div>
-              <div className="bg-white  flex items-center justify-center rounded-md hover:bg-[#7246fd] hover:text-white">
+              <div
+                className={`${
+                  selectContact === 2
+                    ? "bg-[#7246fd] text-white"
+                    : "bg-white text-black"
+                } flex items-center justify-center rounded-sm cursor-pointer`}
+                onClick={() => handleClickContact(2)}
+              >
                 <p>Fix a meeting</p>
               </div>
             </div>

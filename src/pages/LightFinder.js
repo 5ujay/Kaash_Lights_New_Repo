@@ -101,7 +101,7 @@ const LightFinder = () => {
           </div>
         )}
         {count == 0 && (
-          <div className="pb-40 select-none" onClick={increaseCount}>
+          <div className="pb-40 lg:px-12 select-none" onClick={increaseCount}>
             <button className="bg-[#7246FD] lg:-ml-7 px-14 py-2 text-white text-xl">
               Start
             </button>

@@ -4,7 +4,7 @@ import Ellpise_lightfinder_purple from "../Light_finder_images/Ellipse 14.png";
 const LightFinder = () => {
   return (
     <>
-      <section className="pb-4 lg:pb-8 px-8 md:px-20  pt-8 select-none">
+      <section className="pb-4 lg:pb-8 px-8 md:px-20 lg:px-32  pt-8 select-none">
         <img
           class="absolute w-96 md:w-1/2 right-0 ms-auto overflow-hidden top-1/2 translate-x-[0%] translate-y-[-50%] "
           src={Ellpise_lightfinder_purple}
